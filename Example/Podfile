@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DHAP_Example' do
+  pod 'DHAP', :path => '../'
+
+  target 'DHAP_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
