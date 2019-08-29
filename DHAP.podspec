@@ -32,6 +32,8 @@ An open home automation protocol that removes the need for a central controller,
   s.source_files = 'DHAP/Classes/**/*'
   
   s.swift_versions = '5'
+
+  s.dependency 'CocoaAsyncSocket'
   
   # s.resource_bundles = {
   #   'DHAP' => ['DHAP/Assets/*.png']
@@ -39,5 +41,5 @@ An open home automation protocol that removes the need for a central controller,
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
 end

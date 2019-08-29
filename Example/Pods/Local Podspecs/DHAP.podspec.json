@@ -1,8 +1,8 @@
 {
   "name": "DHAP",
   "version": "0.1.0",
-  "summary": "A short description of DHAP.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Decentralised Home Automation Protocol",
+  "description": "An open home automation protocol that removes the need for a central controller, proprietary hardware and software.",
   "homepage": "https://github.com/aidengaripoli/DHAP",
   "license": {
     "type": "MIT",
@@ -16,7 +16,14 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "12"
   },
-  "source_files": "DHAP/Classes/**/*"
+  "source_files": "DHAP/Classes/**/*",
+  "swift_versions": "5",
+  "dependencies": {
+    "CocoaAsyncSocket": [
+
+    ]
+  },
+  "swift_version": "5"
 }

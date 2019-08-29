@@ -44,13 +44,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Devices" id="M5b-gA-52D">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="VjU-Vn-3qL"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="VjU-Vn-3qL">
+                            <connections>
+                                <action selector="refreshDeviceList:" destination="vXZ-lx-hvc" id="YPm-Ts-SM0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpI-gQ-a2c">
                             <connections>
+                                <action selector="addNewDevice:" destination="vXZ-lx-hvc" id="j4b-zg-pct"/>
                                 <segue destination="YfG-hD-hUh" kind="show" id="NLK-DR-Lhg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="deviceTableView" destination="B94-pi-y2C" id="Kj7-HO-aa1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

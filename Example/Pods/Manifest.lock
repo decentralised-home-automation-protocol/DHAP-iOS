@@ -1,16 +1,23 @@
 PODS:
-  - DHAP (0.1.0)
+  - CocoaAsyncSocket (7.6.3)
+  - DHAP (0.1.0):
+    - CocoaAsyncSocket
 
 DEPENDENCIES:
   - DHAP (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
 
 EXTERNAL SOURCES:
   DHAP:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DHAP: 4f92c386a137f14ffc10f906024486af53ade6e8
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  DHAP: 6301c0f5d7a819e92eb5d8a3fdaecd8057924200
 
-PODFILE CHECKSUM: f7a01a003be110212b1037c4a5de160437bbf291
+PODFILE CHECKSUM: 83e3e48a3097b6e460e6f9c1af5530b7789e8b61
 
 COCOAPODS: 1.7.5
