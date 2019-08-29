@@ -1,0 +1,22 @@
+{
+  "name": "DHAP",
+  "version": "0.1.0",
+  "summary": "A short description of DHAP.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/aidengaripoli/DHAP",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "aidengaripoli": "aidosgaripoli@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/aidengaripoli/DHAP.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DHAP/Classes/**/*"
+}

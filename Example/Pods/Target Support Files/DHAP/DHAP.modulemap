@@ -1,0 +1,6 @@
+framework module DHAP {
+  umbrella header "DHAP-umbrella.h"
+
+  export *
+  module * { export * }
+}
