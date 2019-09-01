@@ -120,7 +120,7 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
     private func broadcastList() {
         print("Broadcasting list...")
         
-        var censusListString = "300"
+        var censusListString = PacketCodes.discovery
         
         if censusList.count > 0 {
             censusListString += "|"
