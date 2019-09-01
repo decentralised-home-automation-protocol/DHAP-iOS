@@ -11,7 +11,7 @@ struct UDPPacket {
     
     var data: Data
     
-    var host: String
+    var host: String?
     
     var port: UInt16
     
@@ -19,6 +19,12 @@ struct UDPPacket {
         self.data = data
         self.host = host
         self.port = port
+    }
+    
+    init(data: Data, port: UInt16) {
+        self.data = data
+        self.port = port
+        self.host = nil
     }
     
 }

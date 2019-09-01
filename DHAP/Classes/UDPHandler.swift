@@ -10,29 +10,65 @@ import CocoaAsyncSocket
 
 class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     
+    private let broadcastAddress = "255.255.255.255"
+    
     private var socket: GCDAsyncUdpSocket?
     
-    override init() {
+    private static var sharedUdpHandler: UDPHandler = {
+        let udpHandler = UDPHandler()
+        
+        return udpHandler
+    }()
+    
+    private override init() {
         super.init()
         
         socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .global(qos: .utility))
+        
+        do {
+            try socket?.bind(toPort: 8888)
+            try socket?.enableBroadcast(true)
+            try socket?.beginReceiving()
+        } catch {
+            print(error)
+        }
     }
     
-    public func sendPacket(data: Data, host: String, port: UInt16) {
-//        socket?.send(data, withTimeout: 0, tag: 0)
-        socket?.send(data, toHost: host, port: port, withTimeout: 0, tag: 0)
+    class func shared() -> UDPHandler {
+        return sharedUdpHandler
     }
     
-    public func sendPacketAndListen(packet: UDPPacket, for: Int, completion: ([Data]) -> Void) {
+    func sendPacket(packet: UDPPacket) {
+        socket?.send(packet.data, toHost: packet.host!, port: packet.port, withTimeout: 0, tag: 0)
+    }
+    
+    func sendBroadcastPacket(packet: UDPPacket) {
+        socket?.send(packet.data, toHost: broadcastAddress, port: packet.port, withTimeout: 0, tag: 0)
+    }
+    
+    
+    
+    func sendPacketForReply(packet: UDPPacket, retries: Int) {
+        
+    }
+    
+    func sendPacketAndListen(packet: UDPPacket, duration: Int, completion: ([Data]) -> Void) {
         
     }
     
     // - MARK: GCDAsyncUdpSocketDelegate Delegate Methods
     
-    public func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
+    func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data,
+                          fromAddress address: Data, withFilterContext filterContext: Any?) {
         
-        print(data)
+        print("received packet")
+        let dataString = String(data: data, encoding: .utf8)!
+        print("\(dataString)")
         
     }
+    
+//    deinit {
+//        socket?.close()
+//    }
     
 }

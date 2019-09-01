@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var deviceTableView: UITableView!
     
     var discovery: Discovery?
+    var dhap: DHAP?
     
     var devices = [Device]()
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         discovery = Discovery()
+        dhap = DHAP()
         
         deviceTableView.dataSource = self
     }
@@ -47,6 +49,19 @@ class ViewController: UIViewController {
                 print(error)
             }
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showDeviceInterface":
+            if let row = deviceTableView.indexPathForSelectedRow?.row {
+                let device = devices[row]
+                
+                dhap?.fetchDeviceInterface(device: device)
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
     }
     
 }

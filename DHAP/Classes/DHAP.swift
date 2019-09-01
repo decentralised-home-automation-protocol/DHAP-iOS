@@ -7,14 +7,22 @@
 
 import Foundation
 
-class DHAP {
+public class DHAP {
     
-    public func discoverDevices() {
+    public init() {
         
     }
     
-    public func fetchDeviceInterface() {
+    public func discoverDevices(completion: () -> Void) {
         
+    }
+    
+    public func fetchDeviceInterface(device: Device) {
+        let uiRequest = PacketCodes.uiRequest
+        
+        let packet = UDPPacket(data: uiRequest.data(using: .utf8)!, host: device.ipAddress, port: 8888)
+        
+        UDPHandler.shared().sendPacket(packet: packet)
     }
     
 }

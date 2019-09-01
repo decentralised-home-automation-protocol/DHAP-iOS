@@ -11,4 +11,6 @@ enum PacketCodes {
     
     static let discovery = "300"
     
+    static let uiRequest = "200"
+    
 }
