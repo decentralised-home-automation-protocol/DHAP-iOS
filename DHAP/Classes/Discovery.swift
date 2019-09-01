@@ -14,34 +14,23 @@ public enum DevicesResult {
     case failure(Error)
 }
 
-public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
+public class Discovery: UDPHandlerDelegate {
     
-    private let broadcastAddress = "255.255.255.255"
-    private let udpPort: UInt16 = 8888
-    
-    private var socket: GCDAsyncUdpSocket?
+    var udpHandler: UDPHandler?
     
     private var censusList = [Device]()
     private var previousCensusList = [Device]()
     
     private var repliedDevices = [Device]()
     
-    public override init() {
-        super.init()
-        
-        socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .global(qos: .utility))
+    public init() {
+        udpHandler = UDPHandler()
+        udpHandler?.delegate = self
     }
     
     public func discover(_ completion: @escaping (DevicesResult) -> Void) {
         DispatchQueue.global(qos: .utility).async {
             do {
-                defer {
-                    self.socket?.close()
-                }
-                
-                try self.socket?.bind(toPort: self.udpPort)
-                try self.socket?.enableBroadcast(true)
-                
                 try self.findDevices()
                 
                 if self.censusList.count > 0 {
@@ -62,21 +51,12 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
         while true {
             broadcastList()
             
-            // listen for replies
-            do {
-                try socket?.beginReceiving()
-                // try socket?.receiveOnce()
-            } catch {
-                print(error)
-            }
-            
             let testDGroup = DispatchGroup()
             
             testDGroup.enter()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                 print("should stop receiving now")
-                self.socket?.pauseReceiving()
                 testDGroup.leave()
             }
             
@@ -133,11 +113,13 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
         
         let data = censusListString.data(using: .utf8)!
         
-        socket?.send(data, toHost: broadcastAddress, port: udpPort, withTimeout: 0, tag: 0)
+        let packet = UDPPacket(data: data, port: 8888)
+        udpHandler?.sendBroadcastPacket(packet: packet)
     }
     
     private func parsePacket(data: Data, remoteAddress: String) {
         let packetString = String(data: data, encoding: .utf8)!
+        
         print("Packet data: \(packetString)")
         
         let contents = packetString.split(separator: "|")
@@ -152,18 +134,15 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
         repliedDevices.append(device)
     }
     
-    // MARK: - GCDAsyncUdpSocket Delegate Methods
-    
-    public func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
-        
-        guard let senderAddress = parseRemoteAddress(remoteAddress: address) else {
+    func packetRecevied(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data) {
+        guard let senderAddress = Helper.shared().parseRemoteAddress(remoteAddress: address) else {
             return
         }
-        
-        guard let strIPAddress = getIPAddress() else {
+
+        guard let strIPAddress = Helper.shared().getIPAddress() else {
             return
         }
-        
+
         if strIPAddress == senderAddress {
             print("Received packet from \(senderAddress)")
             print("\tthis must be broadcast packet, ignore.")
@@ -171,60 +150,6 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
             print("Received packet from \(senderAddress)")
             parsePacket(data: data, remoteAddress: senderAddress)
         }
-        
     }
-    
-    
-    
-    private func parseRemoteAddress(remoteAddress: Data) -> String? {
-        var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
-        do {
-            try remoteAddress.withUnsafeBytes { (pointer: UnsafePointer<sockaddr>) -> Void in
-                guard getnameinfo(pointer, socklen_t(remoteAddress.count), &hostname, socklen_t(hostname.count), nil, 0, NI_NUMERICHOST) == 0 else {
-                    throw NSError(domain: "domain", code: 0, userInfo: ["error": "unable to get ip address"])
-                }
-            }
-        } catch {
-            print(error)
-            return nil
-        }
-        let address = String(cString: hostname)
-        
-        if address.contains("::ffff:") {
-            return nil
-        }
-        
-        return address
-    }
-    
-    
-    // ip address
-    private func getIPAddress() -> String? {
-        var address: String?
-        var ifaddr: UnsafeMutablePointer<ifaddrs>? = nil
-        
-        if getifaddrs(&ifaddr) == 0 {
-            var ptr = ifaddr
-            
-            while ptr != nil {
-                defer { ptr = ptr?.pointee.ifa_next }
-                let interface = ptr?.pointee
-                let addrFamily = interface?.ifa_addr.pointee.sa_family
-                
-                if addrFamily == UInt8(AF_INET) || addrFamily == UInt8(AF_INET6) {
-                    let name: String = String(cString: (interface!.ifa_name))
-                    if  name == "en0" {
-                        var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
-                        getnameinfo(interface?.ifa_addr, socklen_t((interface?.ifa_addr.pointee.sa_len)!), &hostname, socklen_t(hostname.count), nil, socklen_t(0), NI_NUMERICHOST)
-                        address = String(cString: hostname)
-                    }
-                }
-            }
-            
-            freeifaddrs(ifaddr)
-        }
-        
-        return address ?? nil
-    }
-    
+
 }

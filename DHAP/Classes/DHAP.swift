@@ -22,7 +22,7 @@ public class DHAP {
         
         let packet = UDPPacket(data: uiRequest.data(using: .utf8)!, host: device.ipAddress, port: 8888)
         
-        UDPHandler.shared().sendPacket(packet: packet)
+//        udpHandler.sendPacket(packet: packet)
     }
     
 }

@@ -8,19 +8,25 @@
 import Foundation
 import CocoaAsyncSocket
 
+protocol UDPHandlerDelegate {
+    func packetRecevied(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data)
+}
+
 class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     
     private let broadcastAddress = "255.255.255.255"
     
     private var socket: GCDAsyncUdpSocket?
     
-    private static var sharedUdpHandler: UDPHandler = {
-        let udpHandler = UDPHandler()
-        
-        return udpHandler
-    }()
+    var delegate: UDPHandlerDelegate?
     
-    private override init() {
+//    private static var sharedUdpHandler: UDPHandler = {
+//        let udpHandler = UDPHandler()
+//
+//        return udpHandler
+//    }()
+    
+    override init() {
         super.init()
         
         socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .global(qos: .utility))
@@ -34,9 +40,9 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
         }
     }
     
-    class func shared() -> UDPHandler {
-        return sharedUdpHandler
-    }
+//    class func shared() -> UDPHandler {
+//        return sharedUdpHandler
+//    }
     
     func sendPacket(packet: UDPPacket) {
         socket?.send(packet.data, toHost: packet.host!, port: packet.port, withTimeout: 0, tag: 0)
@@ -64,6 +70,8 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
         print("received packet")
         let dataString = String(data: data, encoding: .utf8)!
         print("\(dataString)")
+        
+        delegate?.packetRecevied(self, didReceive: data, fromAddress: address)
         
     }
     
