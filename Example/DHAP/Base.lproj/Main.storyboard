@@ -31,6 +31,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZLR-9j-XzK" kind="show" id="0Dc-VK-Vau"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -51,7 +54,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpI-gQ-a2c">
                             <connections>
-                                <action selector="addNewDevice:" destination="vXZ-lx-hvc" id="j4b-zg-pct"/>
                                 <segue destination="YfG-hD-hUh" kind="show" id="NLK-DR-Lhg"/>
                             </connections>
                         </barButtonItem>
@@ -64,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="562" y="448"/>
         </scene>
-        <!--View Controller-->
+        <!--Join New Device-->
         <scene sceneID="rzf-8Y-FmL">
             <objects>
                 <viewController id="YfG-hD-hUh" sceneMemberID="viewController">
@@ -77,10 +79,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Join New Device" id="nUn-FI-Yp5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJe-D3-P3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="448"/>
+            <point key="canvasLocation" x="1593" y="170"/>
+        </scene>
+        <!--Device Name-->
+        <scene sceneID="OsP-Fc-pMJ">
+            <objects>
+                <viewController id="ZLR-9j-XzK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BWX-Ha-jHN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ewa-rN-XMG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4x2-qS-6Yo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Device Name" id="VAz-jE-53l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGA-yH-MFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="18u-sK-M2M">

@@ -9,7 +9,7 @@ import Foundation
 import CocoaAsyncSocket
 
 public enum DevicesResult {
-    case foundDevices([String])
+    case foundDevices([Device])
     case noDevicesFound
     case failure(Error)
 }
@@ -21,10 +21,10 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
     
     private var socket: GCDAsyncUdpSocket?
     
-    private var censusList = [String]()
-    private var previousCensusList = [String]()
+    private var censusList = [Device]()
+    private var previousCensusList = [Device]()
     
-    private var repliedDevices = [String]()
+    private var repliedDevices = [Device]()
     
     public override init() {
         super.init()
@@ -123,7 +123,12 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
         var censusListString = "300"
         
         if censusList.count > 0 {
-            censusListString += "|" + censusList.joined(separator: "-")
+            censusListString += "|"
+            var deviceStrings = [String]()
+            for device in censusList {
+                deviceStrings.append("\(device.macAddress),0,0")
+            }
+            censusListString += deviceStrings.joined(separator: "-")
         }
         
         let data = censusListString.data(using: .utf8)!
@@ -131,15 +136,20 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
         socket?.send(data, toHost: broadcastAddress, port: udpPort, withTimeout: 0, tag: 0)
     }
     
-    private func parsePacket(data: Data) {
+    private func parsePacket(data: Data, remoteAddress: String) {
         let packetString = String(data: data, encoding: .utf8)!
         print("Packet data: \(packetString)")
         
         let contents = packetString.split(separator: "|")
-        //        let device = contents[1].split(separator: ",")
-        // make device instance
         
-        repliedDevices.append(String(contents[1]))
+        guard let macAddress = contents[1].split(separator: ",").first else {
+            return
+        }
+        
+        // make device instance
+        let device = Device(macAddress: String(macAddress), ipAddress: remoteAddress)
+        
+        repliedDevices.append(device)
     }
     
     // MARK: - GCDAsyncUdpSocket Delegate Methods
@@ -154,16 +164,12 @@ public class Discovery: NSObject, GCDAsyncUdpSocketDelegate {
             return
         }
         
-        //        print("Sender IP: \(senderAddress)")
-        //        print("IPAddress: \(strIPAddress)")
-        
-        //        print("received data")
-        
         if strIPAddress == senderAddress {
-            //            print("this must be broadcast packet, ignore.")
+            print("Received packet from \(senderAddress)")
+            print("\tthis must be broadcast packet, ignore.")
         } else {
             print("Received packet from \(senderAddress)")
-            parsePacket(data: data)
+            parsePacket(data: data, remoteAddress: senderAddress)
         }
         
     }

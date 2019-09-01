@@ -14,31 +14,35 @@
 		20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C048F262F6A4130C49AD3954C4CCCD /* CFNetwork.framework */; };
 		204206B3BD0B4475D2F33FF78F9889C0 /* Pods-DHAP_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86569FF38E786B021185FE3DA32B67C4 /* Pods-DHAP_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E15F5E914B87A530FB32F5BC421F94E /* Discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757F88F24EC446786A23BC0136B9D000 /* Discovery.swift */; };
 		411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		446155D49A8F10D0A547EF9BEDFD6082 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
-		657674E118B574ACC2AA8E4CE0009A77 /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F99CA425AC44EEF5D6DC0765EDFE580 /* DHAP-dummy.m */; };
-		6A882CED366781B02461DB851D3B9353 /* DHAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559391E1453C2C0C74E9B702D506E182 /* DHAP.swift */; };
 		6C237B7AA6F4A2DD17CA05EB90C83362 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */; };
-		9946916A9F7E18ED0DB950DA4E3BA33C /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */; };
+		7CA3416C4B795737A8EEB0BA7065A743 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
+		82360756CC75A3EDC50F64A641B3C53F /* Discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BFC20D731B170B44558B608E1FB71 /* Discovery.swift */; };
+		8F20903B231B7C66003F526C /* PacketCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20903A231B7C66003F526C /* PacketCodes.swift */; };
+		9FC95E671A6372FCD9E6D11C9F09C890 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7126653D732EDED2BF71DD218C8A5B /* Device.swift */; };
 		A283F6459B0797EC7FF4A178A6BD1C16 /* Pods-DHAP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EC16C95B74C5C54D38D03F5FE18CBA /* Pods-DHAP_Example-dummy.m */; };
+		AC05D9076D05DA6466C37F032570C53C /* DHAP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B72A41D32C87F86E4F8E49D89275A9 /* DHAP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3DBF0536D1EE0C0D9579AEE852DB04 /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8729874714334E58427C1DFE88B9D33 /* DHAP-dummy.m */; };
+		BD537D11205FD6BB394451169D095233 /* DHAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B3EBBA5F4B38BB7B5B99854426C58 /* DHAP.swift */; };
 		BF0E4454B28437897BC092AE02CD0C13 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DC35F8397CDD13AC7508847E406BACA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
 		DD4A77CB6F2E775B1446A4DE3E3CC9F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
 		DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAFB901E5011ED87AE8D4FA841A498C5 /* Pods-DHAP_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C40045AF9FF0CE52816915506C0399 /* Pods-DHAP_Tests-dummy.m */; };
-		EF07849D7F371784A5C0786DF93A931D /* DHAP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7E131B37003A3F9C7229F2F8988AA6 /* DHAP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE1A604F07C5A60D93E7E8452EDE3B5D /* UDPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1F540F0A8655DC3E88379977B883A /* UDPHandler.swift */; };
+		F10BFCA74384E0E83ED0443ADF6CF55C /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */; };
+		F8CD0844E4F6A37900972379393A041E /* UDPPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9699EF7820AD346479F66B483C9945F /* UDPPacket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		125710355DA709E4D684AD09F5B230C9 /* PBXContainerItemProxy */ = {
+		2268C28E0ABA69772CCC82B7148DCDBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		2268C28E0ABA69772CCC82B7148DCDBD /* PBXContainerItemProxy */ = {
+		C28EAB3CEFAE7284C4A4867737E1F907 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -63,50 +67,54 @@
 
 /* Begin PBXFileReference section */
 		01C40045AF9FF0CE52816915506C0399 /* Pods-DHAP_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHAP_Tests-dummy.m"; sourceTree = "<group>"; };
-		03C17BC0144FE8F4625E1CED846C1A49 /* DHAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DHAP.framework; path = DHAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03C17BC0144FE8F4625E1CED846C1A49 /* DHAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D2BC450C4A6B05397075508D93D9CE /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
 		19F6B030D0E7DA0B32C45F2CA5EF0AF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		1A038CE011D92FBB24CDECC76136CC85 /* Pods-DHAP_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Example-Info.plist"; sourceTree = "<group>"; };
-		1B1833CC1726E32531DCC92A487E0A6A /* Pods_DHAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHAP_Example.framework; path = "Pods-DHAP_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1833CC1726E32531DCC92A487E0A6A /* Pods_DHAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHAP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD141BDADC8619069B414BD49D580B6 /* Pods-DHAP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1F99CA425AC44EEF5D6DC0765EDFE580 /* DHAP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHAP-dummy.m"; sourceTree = "<group>"; };
-		289DFE343A6C0E36F53E46AFD0E2E4CB /* DHAP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-prefix.pch"; sourceTree = "<group>"; };
+		1FCA17671AB9545C4EF1B68CB3A29DAA /* DHAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DHAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2C8AF5C452DCD2E05CBB1EBEB98AB038 /* Pods-DHAP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		30C048F262F6A4130C49AD3954C4CCCD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		39E1F540F0A8655DC3E88379977B883A /* UDPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDPHandler.swift; path = DHAP/Classes/UDPHandler.swift; sourceTree = "<group>"; };
 		41EC16C95B74C5C54D38D03F5FE18CBA /* Pods-DHAP_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHAP_Example-dummy.m"; sourceTree = "<group>"; };
-		559391E1453C2C0C74E9B702D506E182 /* DHAP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHAP.swift; path = DHAP/Classes/DHAP.swift; sourceTree = "<group>"; };
+		60119926122A6D7BC5009EE3364943F9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		694096DDFA3B5605BF5DF45B6B30C6C3 /* Pods-DHAP_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHAP_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		757F88F24EC446786A23BC0136B9D000 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
+		6F3BFC20D731B170B44558B608E1FB71 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
+		70FFD82DB9204324747A2D8174BAF817 /* DHAP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-prefix.pch"; sourceTree = "<group>"; };
 		7CD95662D9650372A7D0F9777A0B1FD2 /* Pods-DHAP_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHAP_Example-umbrella.h"; sourceTree = "<group>"; };
+		7CFA402744D217C82644B4BF8D118902 /* DHAP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHAP-Info.plist"; sourceTree = "<group>"; };
 		85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
 		86569FF38E786B021185FE3DA32B67C4 /* Pods-DHAP_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHAP_Tests-umbrella.h"; sourceTree = "<group>"; };
-		8BE591AD8D18BCED8E2055FC576D3182 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		9052C806A8181126B57285E356B94364 /* DHAP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHAP-Info.plist"; sourceTree = "<group>"; };
-		912C9DF39FC6DFAD186C8BC75B440CD0 /* DHAP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DHAP.modulemap; sourceTree = "<group>"; };
+		8F20903A231B7C66003F526C /* PacketCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PacketCodes.swift; path = DHAP/Classes/PacketCodes.swift; sourceTree = "<group>"; };
 		99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		99E68177E0748BD22687CB428C83DBD5 /* DHAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DHAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F7E131B37003A3F9C7229F2F8988AA6 /* DHAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3B72A41D32C87F86E4F8E49D89275A9 /* DHAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-umbrella.h"; sourceTree = "<group>"; };
 		A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		A8729874714334E58427C1DFE88B9D33 /* DHAP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHAP-dummy.m"; sourceTree = "<group>"; };
 		A905023E6DEC0CB3ACF18BC768C59C2E /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		B3FD643D2C62F79A0090F0ACC1088096 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		B71F2CB63C6A4802CAE0491E7135E04E /* Pods-DHAP_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Tests-Info.plist"; sourceTree = "<group>"; };
 		BA2FDDB8F4EA55EC94ADDAE8CBD9978B /* Pods-DHAP_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DHAP_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BC7126653D732EDED2BF71DD218C8A5B /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = DHAP/Classes/Device.swift; sourceTree = "<group>"; };
 		BDC6EE582D7D1A1A4133A97EF831A009 /* Pods-DHAP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C08B3EBBA5F4B38BB7B5B99854426C58 /* DHAP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHAP.swift; path = DHAP/Classes/DHAP.swift; sourceTree = "<group>"; };
 		C393A70A9AA39323FE61651C4B0F66A6 /* Pods-DHAP_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C6D029DAA32C55A94A1C93C47624AF3A /* Pods-DHAP_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DHAP_Example.modulemap"; sourceTree = "<group>"; };
+		CE8ABA9F0D2B2F5369C4C1F1972CA7E5 /* DHAP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DHAP.modulemap; sourceTree = "<group>"; };
 		D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F6EC5EE2C4372CCC794BC4F5254803 /* Pods_DHAP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHAP_Tests.framework; path = "Pods-DHAP_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F6EC5EE2C4372CCC794BC4F5254803 /* Pods_DHAP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHAP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9699EF7820AD346479F66B483C9945F /* UDPPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDPPacket.swift; path = DHAP/Classes/UDPPacket.swift; sourceTree = "<group>"; };
 		D9C1EC8675975D45AAD7936A484D2825 /* Pods-DHAP_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		DAD58302DDC66C024608DDB347BA143D /* DHAP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHAP.xcconfig; sourceTree = "<group>"; };
 		DEA17E24F689BAD69B80C9E2639F6EE9 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
 		E484F037B807D7B1ECF003384573173D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E594149E958160129F0BB0219B586E54 /* Pods-DHAP_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHAP_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
+		EFDA36B98E07ECCE783FD8E51CDEBC0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F4EDC22582C05DA215E067321958C467 /* DHAP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHAP.xcconfig; sourceTree = "<group>"; };
 		F514E722EF203F612801B4FA185D49EF /* Pods-DHAP_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FD05C97EF77143038AC67D5509997978 /* Pods-DHAP_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DHAP_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +127,15 @@
 				20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */,
 				14703875367641811BD5FE75ACD67C96 /* Foundation.framework in Frameworks */,
 				0EC1806437F66CC12F06DD7ACD1FBA4A /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B7ECD4780584455340A2D5A1483F591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10BFCA74384E0E83ED0443ADF6CF55C /* CocoaAsyncSocket.framework in Frameworks */,
+				7CA3416C4B795737A8EEB0BA7065A743 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,15 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD4A77CB6F2E775B1446A4DE3E3CC9F7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD1CCCC5BE0CFBC636BE841872BBD46A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9946916A9F7E18ED0DB950DA4E3BA33C /* CocoaAsyncSocket.framework in Frameworks */,
-				DC35F8397CDD13AC7508847E406BACA0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,24 +195,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E1046C10FB463CC2CF5FF696102F261 /* Support Files */ = {
+		63A8208848FAAEAB6A860718A0E603B2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				912C9DF39FC6DFAD186C8BC75B440CD0 /* DHAP.modulemap */,
-				DAD58302DDC66C024608DDB347BA143D /* DHAP.xcconfig */,
-				1F99CA425AC44EEF5D6DC0765EDFE580 /* DHAP-dummy.m */,
-				9052C806A8181126B57285E356B94364 /* DHAP-Info.plist */,
-				289DFE343A6C0E36F53E46AFD0E2E4CB /* DHAP-prefix.pch */,
-				9F7E131B37003A3F9C7229F2F8988AA6 /* DHAP-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DHAP";
-			sourceTree = "<group>";
-		};
-		569CB294CB498FC95BF6185A25C38652 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8E6483D39B27BDF87883CC9B4C6C994C /* DHAP */,
+				C9350D57DB360823474D6CC4F7FDF9B3 /* DHAP */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -228,16 +222,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		8E6483D39B27BDF87883CC9B4C6C994C /* DHAP */ = {
+		A192678AB8A04E83E3EBC9E151A622A5 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				559391E1453C2C0C74E9B702D506E182 /* DHAP.swift */,
-				757F88F24EC446786A23BC0136B9D000 /* Discovery.swift */,
-				CDF2C87259391F1EFE514BD6F98A2B93 /* Pod */,
-				4E1046C10FB463CC2CF5FF696102F261 /* Support Files */,
+				1FCA17671AB9545C4EF1B68CB3A29DAA /* DHAP.podspec */,
+				EFDA36B98E07ECCE783FD8E51CDEBC0E /* LICENSE */,
+				60119926122A6D7BC5009EE3364943F9 /* README.md */,
 			);
-			name = DHAP;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		A49791B92A7781B859EAEEF581EE6D8B /* CocoaAsyncSocket */ = {
@@ -249,7 +241,6 @@
 				A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */,
 				B862B4264C2F1D9F87C12772C46C54AE /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -275,14 +266,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CDF2C87259391F1EFE514BD6F98A2B93 /* Pod */ = {
+		C89E10C6EA6A59F2A1AFABEF22562CE1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				99E68177E0748BD22687CB428C83DBD5 /* DHAP.podspec */,
-				8BE591AD8D18BCED8E2055FC576D3182 /* LICENSE */,
-				B3FD643D2C62F79A0090F0ACC1088096 /* README.md */,
+				CE8ABA9F0D2B2F5369C4C1F1972CA7E5 /* DHAP.modulemap */,
+				F4EDC22582C05DA215E067321958C467 /* DHAP.xcconfig */,
+				A8729874714334E58427C1DFE88B9D33 /* DHAP-dummy.m */,
+				7CFA402744D217C82644B4BF8D118902 /* DHAP-Info.plist */,
+				70FFD82DB9204324747A2D8174BAF817 /* DHAP-prefix.pch */,
+				A3B72A41D32C87F86E4F8E49D89275A9 /* DHAP-umbrella.h */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DHAP";
+			sourceTree = "<group>";
+		};
+		C9350D57DB360823474D6CC4F7FDF9B3 /* DHAP */ = {
+			isa = PBXGroup;
+			children = (
+				BC7126653D732EDED2BF71DD218C8A5B /* Device.swift */,
+				C08B3EBBA5F4B38BB7B5B99854426C58 /* DHAP.swift */,
+				6F3BFC20D731B170B44558B608E1FB71 /* Discovery.swift */,
+				39E1F540F0A8655DC3E88379977B883A /* UDPHandler.swift */,
+				D9699EF7820AD346479F66B483C9945F /* UDPPacket.swift */,
+				8F20903A231B7C66003F526C /* PacketCodes.swift */,
+				A192678AB8A04E83E3EBC9E151A622A5 /* Pod */,
+				C89E10C6EA6A59F2A1AFABEF22562CE1 /* Support Files */,
+			);
+			name = DHAP;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CEFD6D54360030FFA426F08630BBC99C /* Pods-DHAP_Tests */ = {
@@ -305,7 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				569CB294CB498FC95BF6185A25C38652 /* Development Pods */,
+				63A8208848FAAEAB6A860718A0E603B2 /* Development Pods */,
 				1A3E0EE19DF23E1AD41A79EC8048EC9E /* Frameworks */,
 				BB2BDAA8DB999C491DAC5EAE1CFDC78F /* Pods */,
 				34350BE4D714BAC3BC81BDE9BAD532F3 /* Products */,
@@ -332,14 +343,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D465B0651BFDE08A060CD242E44834C3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF07849D7F371784A5C0786DF93A931D /* DHAP-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F82807D639FCFDF56A607D3970098A87 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +350,14 @@
 				2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */,
 				DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */,
 				411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984D34A90C60AAF21AD842C13B7C185 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC05D9076D05DA6466C37F032570C53C /* DHAP-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,17 +384,17 @@
 		};
 		E23C2561A8C562343438D079CB4FF1A6 /* DHAP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0CEE67C841D944576E8701CF6CF56BD /* Build configuration list for PBXNativeTarget "DHAP" */;
+			buildConfigurationList = 6C5824D37570D988DD7B6753442D7078 /* Build configuration list for PBXNativeTarget "DHAP" */;
 			buildPhases = (
-				D465B0651BFDE08A060CD242E44834C3 /* Headers */,
-				97E491B31AD3E0812DBE2B82CB551680 /* Sources */,
-				FD1CCCC5BE0CFBC636BE841872BBD46A /* Frameworks */,
-				DB697CE5A579832CC299B6AAE76D6733 /* Resources */,
+				F984D34A90C60AAF21AD842C13B7C185 /* Headers */,
+				B45792CDBB9393BD37C6403CC5F98154 /* Sources */,
+				1B7ECD4780584455340A2D5A1483F591 /* Frameworks */,
+				082FD01C7DB29A5B8DD431AB0D89DDE5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A562F713E7FD2B1B04DCA2C3F1D32995 /* PBXTargetDependency */,
+				6218EFED29012798C8E69F6F1207199E /* PBXTargetDependency */,
 			);
 			name = DHAP;
 			productName = DHAP;
@@ -459,6 +470,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		082FD01C7DB29A5B8DD431AB0D89DDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F26F2BC284BAACA6B633F08E7F4E8FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,13 +492,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B7B5EDC45A81FF70431CFBFB2ABDFFEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB697CE5A579832CC299B6AAE76D6733 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -508,21 +519,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97E491B31AD3E0812DBE2B82CB551680 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				657674E118B574ACC2AA8E4CE0009A77 /* DHAP-dummy.m in Sources */,
-				6A882CED366781B02461DB851D3B9353 /* DHAP.swift in Sources */,
-				2E15F5E914B87A530FB32F5BC421F94E /* Discovery.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE75A8577681CD2E635B915B4F4A9DF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EAFB901E5011ED87AE8D4FA841A498C5 /* Pods-DHAP_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45792CDBB9393BD37C6403CC5F98154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F20903B231B7C66003F526C /* PacketCodes.swift in Sources */,
+				9FC95E671A6372FCD9E6D11C9F09C890 /* Device.swift in Sources */,
+				BB3DBF0536D1EE0C0D9579AEE852DB04 /* DHAP-dummy.m in Sources */,
+				BD537D11205FD6BB394451169D095233 /* DHAP.swift in Sources */,
+				82360756CC75A3EDC50F64A641B3C53F /* Discovery.swift in Sources */,
+				EE1A604F07C5A60D93E7E8452EDE3B5D /* UDPHandler.swift in Sources */,
+				F8CD0844E4F6A37900972379393A041E /* UDPPacket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,17 +550,17 @@
 			target = E23C2561A8C562343438D079CB4FF1A6 /* DHAP */;
 			targetProxy = FCAA02ECCE1D46C2966D05E7D5FA0625 /* PBXContainerItemProxy */;
 		};
+		6218EFED29012798C8E69F6F1207199E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = C28EAB3CEFAE7284C4A4867737E1F907 /* PBXContainerItemProxy */;
+		};
 		75A534F0262664A373F17A4070CBCA86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DHAP_Example";
 			target = EA709714523BC4891A4195C68160261E /* Pods-DHAP_Example */;
 			targetProxy = FFB9CDB9FEE0304B1E96CE15B3678D78 /* PBXContainerItemProxy */;
-		};
-		A562F713E7FD2B1B04DCA2C3F1D32995 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 125710355DA709E4D684AD09F5B230C9 /* PBXContainerItemProxy */;
 		};
 		D2A7158CD60475639293E602C38A9A84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -691,39 +706,6 @@
 			};
 			name = Release;
 		};
-		5AD8880E6CF8240E83CD283F6D96174A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAD58302DDC66C024608DDB347BA143D /* DHAP.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DHAP/DHAP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DHAP/DHAP-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DHAP/DHAP.modulemap";
-				PRODUCT_MODULE_NAME = DHAP;
-				PRODUCT_NAME = DHAP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		75694521DF44E9C45682A3EA115F23BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */;
@@ -824,9 +806,9 @@
 			};
 			name = Debug;
 		};
-		89D6DC7403D9B861374F5CBD8CECD45F /* Release */ = {
+		842313CDD72D4ABACD0FF7307BBAEDDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAD58302DDC66C024608DDB347BA143D /* DHAP.xcconfig */;
+			baseConfigurationReference = F4EDC22582C05DA215E067321958C467 /* DHAP.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -857,6 +839,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		9754A3798F052439F8A0BB686F863EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4EDC22582C05DA215E067321958C467 /* DHAP.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DHAP/DHAP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DHAP/DHAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DHAP/DHAP.modulemap";
+				PRODUCT_MODULE_NAME = DHAP;
+				PRODUCT_NAME = DHAP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C65C00024ABFEAC833388E69576AC2F5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -947,8 +962,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -975,20 +989,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6C5824D37570D988DD7B6753442D7078 /* Build configuration list for PBXNativeTarget "DHAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9754A3798F052439F8A0BB686F863EE4 /* Debug */,
+				842313CDD72D4ABACD0FF7307BBAEDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7123B5D8F461A462F93E959D253F844E /* Build configuration list for PBXNativeTarget "Pods-DHAP_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F356803F0D95DFC363EF46E9F3C5E5F /* Debug */,
 				C65C00024ABFEAC833388E69576AC2F5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0CEE67C841D944576E8701CF6CF56BD /* Build configuration list for PBXNativeTarget "DHAP" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AD8880E6CF8240E83CD283F6D96174A /* Debug */,
-				89D6DC7403D9B861374F5CBD8CECD45F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

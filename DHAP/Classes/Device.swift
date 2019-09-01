@@ -7,15 +7,15 @@
 
 import Foundation
 
-public struct Device {
+public struct Device: Equatable {
     
-    var macAddress: String
+    public var macAddress: String
     
-    var ipAddress: String
+    public var ipAddress: String
     
-    var name: String?
+    public var name: String?
     
-    var room: String?
+    public var room: String?
     
     init(macAddress: String, ipAddress: String) {
         self.macAddress = macAddress
