@@ -134,7 +134,7 @@ public class Discovery: UDPHandlerDelegate {
         repliedDevices.append(device)
     }
     
-    func packetRecevied(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data) {
+    func packetReceived(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data) {
         guard let senderAddress = Helper.shared().parseRemoteAddress(remoteAddress: address) else {
             return
         }

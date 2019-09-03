@@ -9,7 +9,7 @@ import Foundation
 import CocoaAsyncSocket
 
 protocol UDPHandlerDelegate {
-    func packetRecevied(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data)
+    func packetReceived(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data)
 }
 
 class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
@@ -71,7 +71,7 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
         let dataString = String(data: data, encoding: .utf8)!
         print("\(dataString)")
         
-        delegate?.packetRecevied(self, didReceive: data, fromAddress: address)
+        delegate?.packetReceived(self, didReceive: data, fromAddress: address)
         
     }
     
