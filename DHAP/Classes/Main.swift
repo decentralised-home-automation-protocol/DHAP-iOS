@@ -25,15 +25,20 @@ public class Main {
                 let groupView = GroupElement()
                 
                 for e in g.elements {
-                    print("type: \(e.type.rawValue), label: \(e.label)")
+                    print("type: \(e.type.rawValue), label: \(e.displaySettings)")
                     
-                    if e.type == .toggle {
-                        let buttonToggleElement = ButtonToggleElement(frame: CGRect(x: 0, y: 0, width: 150, height: 100))
+                    switch e.type {
+                    case .buttontoggle:
+                        let buttonToggleElement = ButtonToggleElement(frame: .zero)
                         
                         buttonToggleElement.button.setTitle("OFF", for: .normal)
-                        buttonToggleElement.label.text = e.label
+                        buttonToggleElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(buttonToggleElement)
+                    case .switchtoggle:
+                        break
+                    default:
+                        break
                     }
                     
                 }

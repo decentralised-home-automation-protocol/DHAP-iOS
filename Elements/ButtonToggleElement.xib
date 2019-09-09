@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonToggleElement" customModule="DeviceDisplay" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonToggleElement" customModule="DHAP" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="v9y-Cf-S6A" id="KIo-1g-ngG"/>
                 <outlet property="label" destination="7w5-eY-O5e" id="bK1-HR-rxg"/>
@@ -35,10 +35,6 @@
                         <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="ckA-xz-zh9"/>
                     </connections>
                 </button>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvV-TR-6er">
-                    <rect key="frame" x="67" y="29" width="49" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
             </subviews>
             <color key="backgroundColor" red="0.94242155370000003" green="1" blue="0.1619451345" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

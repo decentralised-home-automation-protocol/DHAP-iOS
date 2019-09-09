@@ -107,10 +107,10 @@
 		8F3B7CF623266F5200FDC917 /* GUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GUIElement.swift; path = DHAP/Classes/GUIElement.swift; sourceTree = "<group>"; };
 		8F3B7CF823266F6F00FDC917 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Group.swift; path = DHAP/Classes/Group.swift; sourceTree = "<group>"; };
 		8F3B7CFA23266FAD00FDC917 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Main.swift; path = DHAP/Classes/Main.swift; sourceTree = "<group>"; };
-		8F3B7CFC2326704600FDC917 /* ButtonToggleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
-		8F3B7CFE2326707200FDC917 /* GroupElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
-		8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ButtonToggleElement.xib; path = DHAP/Classes/ButtonToggleElement.xib; sourceTree = "<group>"; };
-		8F3B7D01232670D500FDC917 /* GroupElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupElement.xib; path = DHAP/Classes/GroupElement.xib; sourceTree = "<group>"; };
+		8F3B7CFC2326704600FDC917 /* ButtonToggleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonToggleElement.swift; sourceTree = "<group>"; };
+		8F3B7CFE2326707200FDC917 /* GroupElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupElement.swift; sourceTree = "<group>"; };
+		8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonToggleElement.xib; sourceTree = "<group>"; };
+		8F3B7D01232670D500FDC917 /* GroupElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupElement.xib; sourceTree = "<group>"; };
 		9723055598383790E2CB5533CE89BE37 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
 		99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -249,8 +249,7 @@
 		83843D2A6E1D210D8AA7E2C292A2307A /* DHAP */ = {
 			isa = PBXGroup;
 			children = (
-				8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */,
-				8F3B7D01232670D500FDC917 /* GroupElement.xib */,
+				8F3B7D06232673BE00FDC917 /* Elements */,
 				13A8200798F887EA5E76D8C4145745B6 /* Device.swift */,
 				7E4CF5D127168E4C32BF9B5D2D822565 /* DeviceViewController.swift */,
 				DF0E3BE044CF815E75E185E50F18FADB /* DHAP.swift */,
@@ -263,8 +262,6 @@
 				8F3B7CF623266F5200FDC917 /* GUIElement.swift */,
 				8F3B7CF823266F6F00FDC917 /* Group.swift */,
 				8F3B7CFA23266FAD00FDC917 /* Main.swift */,
-				8F3B7CFC2326704600FDC917 /* ButtonToggleElement.swift */,
-				8F3B7CFE2326707200FDC917 /* GroupElement.swift */,
 				A9708726BB51146576BAD90DF8D50208 /* Pod */,
 				2EE9874949E4FD870E74F6FD9115A609 /* Support Files */,
 			);
@@ -280,6 +277,17 @@
 				19F6B030D0E7DA0B32C45F2CA5EF0AF7 /* Security.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		8F3B7D06232673BE00FDC917 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */,
+				8F3B7CFC2326704600FDC917 /* ButtonToggleElement.swift */,
+				8F3B7D01232670D500FDC917 /* GroupElement.xib */,
+				8F3B7CFE2326707200FDC917 /* GroupElement.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 		A49791B92A7781B859EAEEF581EE6D8B /* CocoaAsyncSocket */ = {

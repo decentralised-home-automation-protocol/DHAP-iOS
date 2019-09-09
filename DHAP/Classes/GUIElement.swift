@@ -9,7 +9,7 @@ import Foundation
 
 public enum GUIElementType: String {
     
-    case toggle, spinner, progress
+    case switchtoggle, buttontoggle, stepper, rangeinput, directionalbuttons, selection, status, textinput, progress, buttongroup, scheduler, password
     
 }
 
@@ -17,6 +17,6 @@ public struct GUIElement {
     
     public var type: GUIElementType
     
-    public var label: String
+    public var displaySettings: [String]
     
 }

@@ -2,21 +2,18 @@
 <device>
     <group id="2">
         <gui_element id="1">
-            <type>toggle</type>
-            <label>Open/Close</label>
-            <value>1</value>
-        </gui_element>
-        <gui_element id="3">
-            <type>toggle</type>
-            <label>Lock/Unlock</label>
-            <value>3</value>
+            <type>buttontoggle</type>
+            <disp_settings>Open/Close,Open,Close</disp_settings>
+            <status_location>5</status_location>
+            <comment>Light Switch</comment>
         </gui_element>
     </group>
     <group id="3">
-        <gui_element id="4">
-            <type>toggle</type>
-            <label>On/Off</label>
-            <value>5</value>
+        <gui_element id="1">
+            <type>buttontoggle</type>
+            <disp_settings>Open/Close,Open,Close</disp_settings>
+            <status_location>5</status_location>
+            <comment>Light Switch</comment>
         </gui_element>
     </group>
 </device>
