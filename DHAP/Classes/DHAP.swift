@@ -18,9 +18,9 @@ public class DHAP {
     }
     
     public func fetchDeviceInterface(device: Device) {
-        let uiRequest = PacketCodes.uiRequest
+        // let uiRequest = PacketCodes.uiRequest
         
-        let packet = UDPPacket(data: uiRequest.data(using: .utf8)!, host: device.ipAddress, port: 8888)
+        // let packet = UDPPacket(data: uiRequest.data(using: .utf8)!, host: device.ipAddress, port: 8888)
         
 //        udpHandler.sendPacket(packet: packet)
     }

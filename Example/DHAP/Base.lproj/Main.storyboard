@@ -31,9 +31,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ZLR-9j-XzK" kind="show" identifier="showDeviceInterface" id="O44-4d-8bn"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

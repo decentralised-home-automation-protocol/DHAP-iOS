@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device>
+    <group id="2">
+        <gui_element id="1">
+            <type>toggle</type>
+            <label>Open/Close</label>
+            <value>1</value>
+        </gui_element>
+        <gui_element id="3">
+            <type>toggle</type>
+            <label>Lock/Unlock</label>
+            <value>3</value>
+        </gui_element>
+    </group>
+    <group id="3">
+        <gui_element id="4">
+            <type>toggle</type>
+            <label>On/Off</label>
+            <value>5</value>
+        </gui_element>
+    </group>
+</device>

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         dhap = DHAP()
         
         deviceTableView.dataSource = self
+        deviceTableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,22 +52,22 @@ class ViewController: UIViewController {
         })
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "showDeviceInterface":
-            if let row = deviceTableView.indexPathForSelectedRow?.row {
-                let device = devices[row]
-                
-                dhap?.fetchDeviceInterface(device: device)
-            }
-        default:
-            preconditionFailure("Unexpected segue identifier.")
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "showDeviceInterface":
+//            if let row = deviceTableView.indexPathForSelectedRow?.row {
+//                let device = devices[row]
+//
+//                dhap?.fetchDeviceInterface(device: device)
+//            }
+//        default:
+//            preconditionFailure("Unexpected segue identifier.")
+//        }
+//    }
     
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if devices.count == 0 {
@@ -86,6 +87,12 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = device.macAddress
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let deviceViewController = DeviceViewController()
+            
+        self.navigationController?.pushViewController(deviceViewController, animated: true)
     }
     
 }
