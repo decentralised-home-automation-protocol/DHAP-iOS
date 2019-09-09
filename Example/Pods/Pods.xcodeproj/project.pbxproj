@@ -36,6 +36,9 @@
 		8F3B7CFF2326707200FDC917 /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B7CFE2326707200FDC917 /* GroupElement.swift */; };
 		8F3B7D02232670D500FDC917 /* ButtonToggleElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */; };
 		8F3B7D03232670D500FDC917 /* GroupElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B7D01232670D500FDC917 /* GroupElement.xib */; };
+		8F3B7D0823267AEA00FDC917 /* SwitchToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B7D0723267AEA00FDC917 /* SwitchToggleElement.swift */; };
+		8F3B7D0A23267B2200FDC917 /* SwitchToggleElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B7D0923267B2200FDC917 /* SwitchToggleElement.xib */; };
+		8F3B7D0C23267C3300FDC917 /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B7D0B23267C3300FDC917 /* ElementView.swift */; };
 		A1866683F6B9AC721AAEA8DC6B2DFF23 /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E53073F1B532816C3D41903304DA4941 /* DHAP-dummy.m */; };
 		A283F6459B0797EC7FF4A178A6BD1C16 /* Pods-DHAP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EC16C95B74C5C54D38D03F5FE18CBA /* Pods-DHAP_Example-dummy.m */; };
 		BF0E4454B28437897BC092AE02CD0C13 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -111,6 +114,9 @@
 		8F3B7CFE2326707200FDC917 /* GroupElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupElement.swift; sourceTree = "<group>"; };
 		8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonToggleElement.xib; sourceTree = "<group>"; };
 		8F3B7D01232670D500FDC917 /* GroupElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupElement.xib; sourceTree = "<group>"; };
+		8F3B7D0723267AEA00FDC917 /* SwitchToggleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwitchToggleElement.swift; path = ../DHAP/Classes/SwitchToggleElement.swift; sourceTree = "<group>"; };
+		8F3B7D0923267B2200FDC917 /* SwitchToggleElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchToggleElement.xib; sourceTree = "<group>"; };
+		8F3B7D0B23267C3300FDC917 /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		9723055598383790E2CB5533CE89BE37 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
 		99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -282,10 +288,13 @@
 		8F3B7D06232673BE00FDC917 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				8F3B7D0B23267C3300FDC917 /* ElementView.swift */,
 				8F3B7D00232670D500FDC917 /* ButtonToggleElement.xib */,
 				8F3B7CFC2326704600FDC917 /* ButtonToggleElement.swift */,
 				8F3B7D01232670D500FDC917 /* GroupElement.xib */,
 				8F3B7CFE2326707200FDC917 /* GroupElement.swift */,
+				8F3B7D0923267B2200FDC917 /* SwitchToggleElement.xib */,
+				8F3B7D0723267AEA00FDC917 /* SwitchToggleElement.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -520,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3B7D03232670D500FDC917 /* GroupElement.xib in Resources */,
+				8F3B7D0A23267B2200FDC917 /* SwitchToggleElement.xib in Resources */,
 				8F3B7D02232670D500FDC917 /* ButtonToggleElement.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,7 +582,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3B7CF523266F2E00FDC917 /* Parser.swift in Sources */,
+				8F3B7D0C23267C3300FDC917 /* ElementView.swift in Sources */,
 				54C0A51A3A9044E811C1820CD5849ABC /* Device.swift in Sources */,
+				8F3B7D0823267AEA00FDC917 /* SwitchToggleElement.swift in Sources */,
 				8F3B7CFD2326704600FDC917 /* ButtonToggleElement.swift in Sources */,
 				5A0A51631FF5BB53FEF4B84E43AF9E91 /* DeviceViewController.swift in Sources */,
 				A1866683F6B9AC721AAEA8DC6B2DFF23 /* DHAP-dummy.m in Sources */,

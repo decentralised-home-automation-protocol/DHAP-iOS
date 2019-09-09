@@ -7,6 +7,12 @@
             <status_location>5</status_location>
             <comment>Light Switch</comment>
         </gui_element>
+        <gui_element id="1">
+            <type>switchtoggle</type>
+            <disp_settings>On/Off</disp_settings>
+            <status_location>7</status_location>
+            <comment>Light Switch</comment>
+        </gui_element>
     </group>
     <group id="3">
         <gui_element id="1">

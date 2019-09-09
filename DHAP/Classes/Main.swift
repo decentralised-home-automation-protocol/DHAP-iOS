@@ -36,7 +36,11 @@ public class Main {
                         
                         groupView.stackView.addArrangedSubview(buttonToggleElement)
                     case .switchtoggle:
-                        break
+                        let switchToggleElement = SwitchToggleElement(frame: .zero)
+                        
+                        switchToggleElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(switchToggleElement)
                     default:
                         break
                     }

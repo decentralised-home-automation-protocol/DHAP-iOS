@@ -1,0 +1,41 @@
+//
+//  ElementView.swift
+//  DHAP
+//
+//  Created by Aiden Garipoli on 9/9/19.
+//
+
+import Foundation
+
+class ElementView: UIView {
+    
+    var contentView: UIView?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    func commonInit() {
+        guard let view = loadViewFromNib() else { return }
+        view.frame = self.bounds
+        self.addSubview(view)
+        contentView = view
+    }
+    
+}
+
+extension UIView {
+    
+    func loadViewFromNib() -> UIView? {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil).first as? UIView
+    }
+    
+}
