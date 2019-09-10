@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RangeInput: ElementView {
+class RangeInputElement: ElementView {
     
     @IBOutlet var label: UILabel!
     

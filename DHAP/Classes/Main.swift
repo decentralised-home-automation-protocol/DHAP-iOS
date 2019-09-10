@@ -49,11 +49,11 @@ public class Main {
                         
                         groupView.stackView.addArrangedSubview(stepperElement)
                     case .rangeinput:
-                        let rangeInput = RangeInput(frame: .zero)
+                        let rangeInputElement = RangeInputElement(frame: .zero)
                         
-                        rangeInput.label.text = e.displaySettings.first
+                        rangeInputElement.label.text = e.displaySettings.first
                         
-                        groupView.stackView.addArrangedSubview(rangeInput)
+                        groupView.stackView.addArrangedSubview(rangeInputElement)
                     default:
                         break
                     }

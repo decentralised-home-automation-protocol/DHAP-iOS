@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RangeInput" customModule="DHAP" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RangeInputElement" customModule="DHAP" customModuleProvider="target">
             <connections>
                 <outlet property="label" destination="kEP-ML-ca2" id="PjF-bB-deg"/>
                 <outlet property="textField" destination="uEo-uL-el3" id="eDA-zP-1X5"/>
