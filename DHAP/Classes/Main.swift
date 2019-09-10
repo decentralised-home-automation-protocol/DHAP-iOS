@@ -44,7 +44,9 @@ public class Main {
                     case .stepper:
                         let stepperElement = StepperElement(frame: .zero)
                         
-//                        stepperElement.label
+                        stepperElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(stepperElement)
                     default:
                         break
                     }

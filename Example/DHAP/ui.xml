@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <device>
     <group id="2">
+        <label>Group 1</label>
         <gui_element id="1">
             <type>buttontoggle</type>
             <disp_settings>Open/Close,Open,Close</disp_settings>
@@ -15,11 +16,12 @@
         </gui_element>
     </group>
     <group id="3">
+        <label>Group 2</label>
         <gui_element id="1">
-            <type>buttontoggle</type>
-            <disp_settings>Open/Close,Open,Close</disp_settings>
-            <status_location>5</status_location>
-            <comment>Light Switch</comment>
+            <type>stepper</type>
+            <disp_settings>Number,0,10</disp_settings>
+            <status_location>1</status_location>
+            <comment>Number Counter</comment>
         </gui_element>
     </group>
 </device>
