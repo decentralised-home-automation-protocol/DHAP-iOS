@@ -41,6 +41,10 @@ public class Main {
                         switchToggleElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(switchToggleElement)
+                    case .stepper:
+                        let stepperElement = StepperElement(frame: .zero)
+                        
+//                        stepperElement.label
                     default:
                         break
                     }
