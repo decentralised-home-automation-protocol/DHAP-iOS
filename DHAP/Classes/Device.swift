@@ -15,7 +15,7 @@ public struct Device: Equatable {
     
     public var name: String?
     
-    public var room: String?
+    public var location: String?
     
     init(macAddress: String, ipAddress: String) {
         self.macAddress = macAddress

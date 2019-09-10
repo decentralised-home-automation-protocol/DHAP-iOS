@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <device>
-    <group id="2">
+    <name>Test Element</name>
+    <location>Living Room</location>
+
+    <group id="1">
         <label>Group 1</label>
         <gui_element id="1">
             <type>buttontoggle</type>
@@ -8,16 +11,17 @@
             <status_location>5</status_location>
             <comment>Light Switch</comment>
         </gui_element>
-        <gui_element id="1">
+        <gui_element id="2">
             <type>switchtoggle</type>
             <disp_settings>On/Off</disp_settings>
             <status_location>7</status_location>
             <comment>Light Switch</comment>
         </gui_element>
     </group>
-    <group id="3">
+
+    <group id="2">
         <label>Group 2</label>
-        <gui_element id="1">
+        <gui_element id="3">
             <type>stepper</type>
             <disp_settings>Number,0,10</disp_settings>
             <status_location>1</status_location>
