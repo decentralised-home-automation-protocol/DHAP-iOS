@@ -23,6 +23,7 @@ public class Main {
                 
                 print("Group Start")
                 let groupView = GroupElement()
+                groupView.label.text = g.label
                 
                 for e in g.elements {
                     print("type: \(e.type.rawValue), label: \(e.displaySettings)")

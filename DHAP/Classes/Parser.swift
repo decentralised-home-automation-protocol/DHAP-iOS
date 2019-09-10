@@ -13,6 +13,7 @@ enum Schema: String {
 
 class Parser: NSObject, XMLParserDelegate {
     
+    private var currentGroupLabel = String()
     private var currentElement = String()
     private var currentElementType = String()
     private var currentElementDisplaySettings = [String]()
@@ -44,12 +45,19 @@ class Parser: NSObject, XMLParserDelegate {
             currentElementDisplaySettings.removeAll()
         }
         
+        if elementName == "group" {
+            currentGroupLabel = ""
+        }
+        
         currentElement = elementName
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentElement {
-        case "type": currentElementType += string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        case "label":
+            currentGroupLabel += string.trimmingCharacters(in: .whitespacesAndNewlines)
+        case "type":
+            currentElementType += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "disp_settings":
             let displaySettingsString = string.trimmingCharacters(in: .whitespacesAndNewlines)
             let displaySettings = displaySettingsString.split(separator: ",")
@@ -69,7 +77,7 @@ class Parser: NSObject, XMLParserDelegate {
                 self.guiElements.append(guiElement)
             }
         case "group":
-            let group = Group(elements: guiElements)
+            let group = Group(label: currentGroupLabel, elements: guiElements)
             self.groups.append(group)
             guiElements = []
         default: break
