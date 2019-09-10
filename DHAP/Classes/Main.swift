@@ -48,6 +48,12 @@ public class Main {
                         stepperElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(stepperElement)
+                    case .rangeinput:
+                        let rangeInput = RangeInput(frame: .zero)
+                        
+                        rangeInput.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(rangeInput)
                     default:
                         break
                     }

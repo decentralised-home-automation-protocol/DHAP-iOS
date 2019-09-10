@@ -23,6 +23,8 @@
 		537F65A9525DEF77E10022E7AEA5F5A9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B469560B0C4CA13DA3C4685A8EF22F0F /* Parser.swift */; };
 		6C237B7AA6F4A2DD17CA05EB90C83362 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */; };
 		85887E018142EF2684A0FA4BD3622E5F /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A347C80B419A65CB809B86BFCE6BB463 /* DHAP-dummy.m */; };
+		8F272F0E23278DDC00CA7D73 /* RangeInputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F272F0D23278DDC00CA7D73 /* RangeInputElement.swift */; };
+		8F272F1023278E0A00CA7D73 /* RangeInputElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F272F0F23278E0A00CA7D73 /* RangeInputElement.xib */; };
 		8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */; };
 		8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEC23273AFE00130A9F /* ElementView.swift */; };
 		8F9C1AF923273B3C00130A9F /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE823273AFE00130A9F /* GroupElement.swift */; };
@@ -109,6 +111,8 @@
 		86569FF38E786B021185FE3DA32B67C4 /* Pods-DHAP_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHAP_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8D3FAD155179250DAA9C5DB76A9A2BFC /* DHAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-umbrella.h"; sourceTree = "<group>"; };
 		8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		8F272F0D23278DDC00CA7D73 /* RangeInputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RangeInputElement.swift; path = DHAP/Classes/RangeInputElement.swift; sourceTree = "<group>"; };
+		8F272F0F23278E0A00CA7D73 /* RangeInputElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RangeInputElement.xib; path = DHAP/Classes/RangeInputElement.xib; sourceTree = "<group>"; };
 		8F9C1AE723273AFE00130A9F /* StepperElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepperElement.swift; path = DHAP/Classes/StepperElement.swift; sourceTree = "<group>"; };
 		8F9C1AE823273AFE00130A9F /* GroupElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
 		8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				8F9C1AEC23273AFE00130A9F /* ElementView.swift */,
+				8F272F0D23278DDC00CA7D73 /* RangeInputElement.swift */,
+				8F272F0F23278E0A00CA7D73 /* RangeInputElement.xib */,
 				8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */,
 				8F9C1AEE23273AFE00130A9F /* ButtonToggleElement.xib */,
 				8F9C1AE823273AFE00130A9F /* GroupElement.swift */,
@@ -531,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F272F1023278E0A00CA7D73 /* RangeInputElement.xib in Resources */,
 				8F9C1B0023273C5800130A9F /* StepperElement.xib in Resources */,
 				8F9C1AFD23273B4B00130A9F /* SwitchToggleElement.xib in Resources */,
 				8F9C1AFA23273B4100130A9F /* GroupElement.xib in Resources */,
@@ -579,6 +586,7 @@
 			files = (
 				8F9C1AFC23273B4800130A9F /* SwitchToggleElement.swift in Sources */,
 				201F9A5DB139456EC2E01EDAA551D7DF /* Device.swift in Sources */,
+				8F272F0E23278DDC00CA7D73 /* RangeInputElement.swift in Sources */,
 				3923EFC2BA50EAFF73B2F28AFE7431D5 /* DeviceViewController.swift in Sources */,
 				8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */,
 				8FD1350123272C4D005399F6 /* GUIElement.swift in Sources */,
