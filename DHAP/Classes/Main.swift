@@ -54,6 +54,17 @@ public class Main {
                         rangeInputElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(rangeInputElement)
+                    case .directionalbuttons:
+                        let directionalButtonsElement = DirectionalButtonsElement(frame: .zero)
+                        
+                        directionalButtonsElement.label.text = e.displaySettings.first
+                        
+                        directionalButtonsElement.topButton.setTitle(e.displaySettings[1], for: .normal)
+                        directionalButtonsElement.rightButton.setTitle(e.displaySettings[2], for: .normal)
+                        directionalButtonsElement.bottomButton.setTitle(e.displaySettings[3], for: .normal)
+                        directionalButtonsElement.leftButton.setTitle(e.displaySettings[4], for: .normal)
+                        
+                        groupView.stackView.addArrangedSubview(directionalButtonsElement)
                     default:
                         break
                     }

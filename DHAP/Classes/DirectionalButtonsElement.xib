@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DirectionalButtonsElement" customModule="DHAP" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomButton" destination="NVD-hh-Shd" id="QMc-hO-HT9"/>
+                <outlet property="label" destination="gpb-8L-mMW" id="uKp-Kk-2Op"/>
+                <outlet property="leftButton" destination="uxg-jc-oRJ" id="Qb2-W1-t1d"/>
+                <outlet property="rightButton" destination="wYN-7D-pFz" id="joN-OW-Wub"/>
+                <outlet property="topButton" destination="8tw-6y-2A6" id="EHq-eR-wrv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="276" height="124"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxg-jc-oRJ">
+                    <rect key="frame" x="8" y="47" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="leftButtonPressed:" destination="-1" eventType="touchUpInside" id="yM6-j4-W5q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tw-6y-2A6">
+                    <rect key="frame" x="62" y="47" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="topButtonPressed:" destination="-1" eventType="touchUpInside" id="0Kr-Xb-GWj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVD-hh-Shd">
+                    <rect key="frame" x="116" y="47" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="bottomButtonPressed:" destination="-1" eventType="touchUpInside" id="BHj-j7-tfl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-8L-mMW">
+                    <rect key="frame" x="8" y="8" width="260" height="31"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYN-7D-pFz">
+                    <rect key="frame" x="170" y="47" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="rightButtonPressed:" destination="-1" eventType="touchUpInside" id="auM-m1-bKx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8tw-6y-2A6" firstAttribute="leading" secondItem="uxg-jc-oRJ" secondAttribute="trailing" constant="8" id="3gD-5H-Oau"/>
+                <constraint firstItem="uxg-jc-oRJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="46W-s4-grU"/>
+                <constraint firstItem="wYN-7D-pFz" firstAttribute="top" secondItem="gpb-8L-mMW" secondAttribute="bottom" constant="8" id="48e-aW-cAF"/>
+                <constraint firstItem="NVD-hh-Shd" firstAttribute="leading" secondItem="8tw-6y-2A6" secondAttribute="trailing" constant="8" id="I3S-TE-UlV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gpb-8L-mMW" secondAttribute="trailing" constant="8" id="ICb-OF-Ad9"/>
+                <constraint firstItem="gpb-8L-mMW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="JRb-ts-BoH"/>
+                <constraint firstItem="uxg-jc-oRJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="QDC-Wn-spC"/>
+                <constraint firstItem="wYN-7D-pFz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vii-6h-rOb"/>
+                <constraint firstItem="uxg-jc-oRJ" firstAttribute="top" secondItem="gpb-8L-mMW" secondAttribute="bottom" constant="8" id="WgO-Yy-OBI"/>
+                <constraint firstItem="8tw-6y-2A6" firstAttribute="top" secondItem="gpb-8L-mMW" secondAttribute="bottom" constant="8" id="Yzy-t1-S9r"/>
+                <constraint firstItem="gpb-8L-mMW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="ZlV-lD-IYg"/>
+                <constraint firstItem="wYN-7D-pFz" firstAttribute="leading" secondItem="NVD-hh-Shd" secondAttribute="trailing" constant="8" id="bZY-xf-7xH"/>
+                <constraint firstItem="NVD-hh-Shd" firstAttribute="top" secondItem="gpb-8L-mMW" secondAttribute="bottom" constant="8" id="qzC-qf-b81"/>
+                <constraint firstItem="8tw-6y-2A6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vAb-oF-ab8"/>
+                <constraint firstItem="NVD-hh-Shd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zJz-de-AKG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.600000000000001" y="312.14392803598201"/>
+        </view>
+    </objects>
+</document>

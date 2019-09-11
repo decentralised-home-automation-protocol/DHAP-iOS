@@ -11,6 +11,7 @@
             <status_location>5</status_location>
             <comment>Light Switch</comment>
         </gui_element>
+
         <gui_element id="2">
             <type>switchtoggle</type>
             <disp_settings>On/Off</disp_settings>
@@ -26,6 +27,20 @@
             <disp_settings>Number,0,10</disp_settings>
             <status_location>1</status_location>
             <comment>Number Counter</comment>
+        </gui_element>
+        
+        <gui_element id="4">
+            <type>rangeinput</type>
+            <disp_settings>Volume,Set,1000,3000</disp_settings>
+            <status_location>1</status_location>
+            <comment>Volume Slider</comment>
+        </gui_element>
+
+        <gui_element id="5">
+            <type>directionalbuttons</type>
+            <disp_settings>Direction,N,E,S,W</disp_settings>
+            <status_location>1</status_location>
+            <comment>Directional movement</comment>
         </gui_element>
     </group>
 </device>
