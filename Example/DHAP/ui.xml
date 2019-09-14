@@ -45,11 +45,19 @@
     </group>
     
     <group id="3">
+        <label>Group 3</label>
         <gui_element id="6">
             <type>selection</type>
             <disp_settings>Move Door,one,two,three,four,five,six</disp_settings>
             <status_location>1</status_location>
             <comment>Door positions</comment>
+        </gui_element>
+        
+        <gui_element id="1">
+            <type>status</type>
+            <disp_settings>Voltage</disp_settings>
+            <status_location>1</status_location>
+            <comment>Voltage level</comment>
         </gui_element>
     </group>
 </device>

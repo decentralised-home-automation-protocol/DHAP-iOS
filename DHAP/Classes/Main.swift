@@ -74,6 +74,12 @@ public class Main {
                         selectionElement.data = Array(data.dropFirst())
                         
                         groupView.stackView.addArrangedSubview(selectionElement)
+                    case .status:
+                        let statusElement = StatusElement(frame: .zero)
+                        
+                        statusElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(statusElement)
                     default:
                         break
                     }
