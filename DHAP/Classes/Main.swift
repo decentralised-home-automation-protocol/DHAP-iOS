@@ -87,6 +87,12 @@ public class Main {
                         textInputElement.button.setTitle(e.displaySettings[1], for: .normal)
                         
                         groupView.stackView.addArrangedSubview(textInputElement)
+                    case .progress:
+                        let progressElement = ProgressElement(frame: .zero)
+                        
+                        progressElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(progressElement)
                     default:
                         break
                     }

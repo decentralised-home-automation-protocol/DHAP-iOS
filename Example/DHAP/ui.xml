@@ -66,5 +66,12 @@
             <status_location>1</status_location>
             <comment>Name</comment>
         </gui_element>
+        
+        <gui_element id="1">
+            <type>progress</type>
+            <disp_settings>Loading...</disp_settings>
+            <status_location>1</status_location>
+            <comment>Loading progression</comment>
+        </gui_element>
     </group>
 </device>
