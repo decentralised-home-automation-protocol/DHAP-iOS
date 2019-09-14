@@ -93,6 +93,21 @@ public class Main {
                         progressElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(progressElement)
+                    case .buttongroup:
+                        let buttonGroupElement = ButtonGroupElement(frame: .zero)
+                        
+                        buttonGroupElement.label.text = e.displaySettings.first
+                        
+                        // create buttons
+                        let buttonLabels = e.displaySettings.dropFirst()
+                        for buttonLabel in buttonLabels {
+                            let button = UIButton()
+                            button.setTitleColor(groupView.tintColor, for: .normal)
+                            button.setTitle(buttonLabel, for: .normal)
+                            buttonGroupElement.stackView.addArrangedSubview(button)
+                        }
+                        
+                        groupView.stackView.addArrangedSubview(buttonGroupElement)
                     case .password:
                         let passwordElement = PasswordElement(frame: .zero)
                         

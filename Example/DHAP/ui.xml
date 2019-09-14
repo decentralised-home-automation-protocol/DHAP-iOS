@@ -5,6 +5,7 @@
 
     <group id="1">
         <label>Group 1</label>
+
         <gui_element id="1">
             <type>buttontoggle</type>
             <disp_settings>Open/Close,Open,Close</disp_settings>
@@ -22,6 +23,7 @@
 
     <group id="2">
         <label>Group 2</label>
+
         <gui_element id="3">
             <type>stepper</type>
             <disp_settings>Number,0,10</disp_settings>
@@ -46,6 +48,7 @@
     
     <group id="3">
         <label>Group 3</label>
+
         <gui_element id="6">
             <type>selection</type>
             <disp_settings>Move Door,one,two,three,four,five,six</disp_settings>
@@ -80,6 +83,14 @@
             <status_location>1</status_location>
             <comment>Enter your password</comment>
         </gui_element>
+    </group>
+    <group>
+        <label>Group 4</label>
 
+        <gui_element id="1">
+            <type>buttongroup</type>
+            <disp_settings>Numpad,1,2,3,4</disp_settings>
+            <comment>Numpad</comment>
+        </gui_element>
     </group>
 </device>

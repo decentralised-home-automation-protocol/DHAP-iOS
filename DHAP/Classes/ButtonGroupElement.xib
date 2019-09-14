@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonGroupElement" customModule="DHAP" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="Krh-34-hCq" id="npg-Id-6Dd"/>
+                <outlet property="stackView" destination="ZdA-88-NTV" id="R4q-h9-2UV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krh-34-hCq">
+                    <rect key="frame" x="8" y="8" width="42" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-88-NTV">
+                    <rect key="frame" x="58" y="8" width="228" height="34"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZdA-88-NTV" firstAttribute="leading" secondItem="Krh-34-hCq" secondAttribute="trailing" constant="8" id="1g9-S6-bBd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZdA-88-NTV" secondAttribute="trailing" constant="8" id="760-Jm-BMJ"/>
+                <constraint firstItem="Krh-34-hCq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Amu-hq-zsb"/>
+                <constraint firstItem="Krh-34-hCq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CcS-bR-1k9"/>
+                <constraint firstItem="Krh-34-hCq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Tz6-6E-Mfb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Krh-34-hCq" secondAttribute="bottom" constant="8" id="aya-0u-x7G"/>
+                <constraint firstItem="ZdA-88-NTV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="tt9-ar-06r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZdA-88-NTV" secondAttribute="bottom" constant="8" id="uyw-eb-bbh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="41.600000000000001" y="456.97151424287858"/>
+        </view>
+    </objects>
+</document>

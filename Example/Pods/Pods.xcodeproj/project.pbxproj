@@ -37,6 +37,8 @@
 		8F7057BC232CB2430001138C /* ProgressElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057BB232CB2430001138C /* ProgressElement.xib */; };
 		8F7057BE232CB4870001138C /* PasswordElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057BD232CB4870001138C /* PasswordElement.swift */; };
 		8F7057C0232CB4980001138C /* PasswordElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057BF232CB4980001138C /* PasswordElement.xib */; };
+		8F7057C2232CBD010001138C /* ButtonGroupElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057C1232CBD010001138C /* ButtonGroupElement.xib */; };
+		8F7057C4232CBD110001138C /* ButtonGroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057C3232CBD110001138C /* ButtonGroupElement.swift */; };
 		8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */; };
 		8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEC23273AFE00130A9F /* ElementView.swift */; };
 		8F9C1AF923273B3C00130A9F /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE823273AFE00130A9F /* GroupElement.swift */; };
@@ -137,6 +139,8 @@
 		8F7057BB232CB2430001138C /* ProgressElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressElement.xib; path = DHAP/Classes/ProgressElement.xib; sourceTree = "<group>"; };
 		8F7057BD232CB4870001138C /* PasswordElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordElement.swift; path = DHAP/Classes/PasswordElement.swift; sourceTree = "<group>"; };
 		8F7057BF232CB4980001138C /* PasswordElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PasswordElement.xib; path = DHAP/Classes/PasswordElement.xib; sourceTree = "<group>"; };
+		8F7057C1232CBD010001138C /* ButtonGroupElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ButtonGroupElement.xib; path = DHAP/Classes/ButtonGroupElement.xib; sourceTree = "<group>"; };
+		8F7057C3232CBD110001138C /* ButtonGroupElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonGroupElement.swift; path = DHAP/Classes/ButtonGroupElement.swift; sourceTree = "<group>"; };
 		8F9C1AE723273AFE00130A9F /* StepperElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepperElement.swift; path = DHAP/Classes/StepperElement.swift; sourceTree = "<group>"; };
 		8F9C1AE823273AFE00130A9F /* GroupElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
 		8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 				8F7057B1232C87270001138C /* StatusElement.swift */,
 				8F7057B3232C87480001138C /* StatusElement.xib */,
 				8F7057B5232C89DF0001138C /* TextInputElement.swift */,
+				8F7057C1232CBD010001138C /* ButtonGroupElement.xib */,
+				8F7057C3232CBD110001138C /* ButtonGroupElement.swift */,
 				8F7057B7232C89FC0001138C /* TextInputElement.xib */,
 				8F7057B9232CB1F30001138C /* ProgressElement.swift */,
 				8F7057BB232CB2430001138C /* ProgressElement.xib */,
@@ -583,6 +589,7 @@
 				8F7057BC232CB2430001138C /* ProgressElement.xib in Resources */,
 				8F9C1AFE23273B4F00130A9F /* ButtonToggleElement.xib in Resources */,
 				8F7057C0232CB4980001138C /* PasswordElement.xib in Resources */,
+				8F7057C2232CBD010001138C /* ButtonGroupElement.xib in Resources */,
 				8F272F122327903100CA7D73 /* DirectionalButtonsElement.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +637,7 @@
 				201F9A5DB139456EC2E01EDAA551D7DF /* Device.swift in Sources */,
 				8F272F0E23278DDC00CA7D73 /* RangeInputElement.swift in Sources */,
 				3923EFC2BA50EAFF73B2F28AFE7431D5 /* DeviceViewController.swift in Sources */,
+				8F7057C4232CBD110001138C /* ButtonGroupElement.swift in Sources */,
 				8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */,
 				8FD1350123272C4D005399F6 /* GUIElement.swift in Sources */,
 				8F7057BA232CB1F30001138C /* ProgressElement.swift in Sources */,
