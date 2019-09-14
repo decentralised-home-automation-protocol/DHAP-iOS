@@ -18,6 +18,9 @@ open class DeviceViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissActiveSelection))
+        self.view.addGestureRecognizer(tapGesture)
+        
         navigationController?.title = "Device"
         
         let xmlPath = Bundle.main.url(forResource: "ui", withExtension: ".xml")!
@@ -26,6 +29,10 @@ open class DeviceViewController: UIViewController {
         main.getGroupElements(xmlPath: xmlPath) { (groupElements) in
             self.addGroupElementsToView(groupElements: groupElements)
         }
+    }
+    
+    @objc private func dismissActiveSelection() {
+        self.view.endEditing(true)
     }
     
     private func addGroupElementsToView(groupElements: [GroupElement]) {
