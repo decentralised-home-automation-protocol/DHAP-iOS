@@ -43,4 +43,13 @@
             <comment>Directional movement</comment>
         </gui_element>
     </group>
+    
+    <group id="3">
+        <gui_element id="6">
+            <type>selection</type>
+            <disp_settings>Move Door,one,two,three,four,five,six</disp_settings>
+            <status_location>1</status_location>
+            <comment>Door positions</comment>
+        </gui_element>
+    </group>
 </device>

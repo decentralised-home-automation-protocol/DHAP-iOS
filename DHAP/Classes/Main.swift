@@ -65,6 +65,15 @@ public class Main {
                         directionalButtonsElement.leftButton.setTitle(e.displaySettings[4], for: .normal)
                         
                         groupView.stackView.addArrangedSubview(directionalButtonsElement)
+                    case .selection:
+                        let selectionElement = SelectionElement(frame: .zero)
+                        
+                        selectionElement.label.text = e.displaySettings.first
+                        
+                        let data = e.displaySettings
+                        selectionElement.data = Array(data.dropFirst())
+                        
+                        groupView.stackView.addArrangedSubview(selectionElement)
                     default:
                         break
                     }
