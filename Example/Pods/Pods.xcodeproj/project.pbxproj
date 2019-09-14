@@ -31,6 +31,8 @@
 		8F272F142327904400CA7D73 /* DirectionalButtonsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F272F132327904400CA7D73 /* DirectionalButtonsElement.swift */; };
 		8F7057B2232C87270001138C /* StatusElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057B1232C87270001138C /* StatusElement.swift */; };
 		8F7057B4232C87480001138C /* StatusElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057B3232C87480001138C /* StatusElement.xib */; };
+		8F7057B6232C89DF0001138C /* TextInputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057B5232C89DF0001138C /* TextInputElement.swift */; };
+		8F7057B8232C89FC0001138C /* TextInputElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057B7232C89FC0001138C /* TextInputElement.xib */; };
 		8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */; };
 		8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEC23273AFE00130A9F /* ElementView.swift */; };
 		8F9C1AF923273B3C00130A9F /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE823273AFE00130A9F /* GroupElement.swift */; };
@@ -125,6 +127,8 @@
 		8F272F132327904400CA7D73 /* DirectionalButtonsElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DirectionalButtonsElement.swift; path = DHAP/Classes/DirectionalButtonsElement.swift; sourceTree = "<group>"; };
 		8F7057B1232C87270001138C /* StatusElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusElement.swift; path = DHAP/Classes/StatusElement.swift; sourceTree = "<group>"; };
 		8F7057B3232C87480001138C /* StatusElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatusElement.xib; path = DHAP/Classes/StatusElement.xib; sourceTree = "<group>"; };
+		8F7057B5232C89DF0001138C /* TextInputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextInputElement.swift; path = DHAP/Classes/TextInputElement.swift; sourceTree = "<group>"; };
+		8F7057B7232C89FC0001138C /* TextInputElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextInputElement.xib; path = DHAP/Classes/TextInputElement.xib; sourceTree = "<group>"; };
 		8F9C1AE723273AFE00130A9F /* StepperElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepperElement.swift; path = DHAP/Classes/StepperElement.swift; sourceTree = "<group>"; };
 		8F9C1AE823273AFE00130A9F /* GroupElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
 		8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 				8F272F112327903100CA7D73 /* DirectionalButtonsElement.xib */,
 				8F7057B1232C87270001138C /* StatusElement.swift */,
 				8F7057B3232C87480001138C /* StatusElement.xib */,
+				8F7057B5232C89DF0001138C /* TextInputElement.swift */,
+				8F7057B7232C89FC0001138C /* TextInputElement.xib */,
 				8FD1350023272C4D005399F6 /* GUIElement.swift */,
 				6785C6C8D31CF5457BD7F19D22358F16 /* Device.swift */,
 				448AD81ED042EB81110D4847F24A6499 /* DeviceViewController.swift */,
@@ -559,6 +565,7 @@
 				8F1ED530232B011B002A5976 /* SelectionElement.xib in Resources */,
 				8F272F1023278E0A00CA7D73 /* RangeInputElement.xib in Resources */,
 				8F9C1B0023273C5800130A9F /* StepperElement.xib in Resources */,
+				8F7057B8232C89FC0001138C /* TextInputElement.xib in Resources */,
 				8F9C1AFD23273B4B00130A9F /* SwitchToggleElement.xib in Resources */,
 				8F9C1AFA23273B4100130A9F /* GroupElement.xib in Resources */,
 				8F9C1AFE23273B4F00130A9F /* ButtonToggleElement.xib in Resources */,
@@ -624,6 +631,7 @@
 				8F1ED52E232B00FC002A5976 /* SelectionElement.swift in Sources */,
 				537F65A9525DEF77E10022E7AEA5F5A9 /* Parser.swift in Sources */,
 				8F272F142327904400CA7D73 /* DirectionalButtonsElement.swift in Sources */,
+				8F7057B6232C89DF0001138C /* TextInputElement.swift in Sources */,
 				A69FE79292A341762230A3248D77E530 /* UDPHandler.swift in Sources */,
 				8F7057B2232C87270001138C /* StatusElement.swift in Sources */,
 				B34B2115E7034440EC90D5E6620E3D9A /* UDPPacket.swift in Sources */,

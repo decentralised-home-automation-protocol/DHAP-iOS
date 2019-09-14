@@ -59,5 +59,12 @@
             <status_location>1</status_location>
             <comment>Voltage level</comment>
         </gui_element>
+        
+        <gui_element id="1">
+            <type>textinput</type>
+            <disp_settings>Name,Submit</disp_settings>
+            <status_location>1</status_location>
+            <comment>Name</comment>
+        </gui_element>
     </group>
 </device>

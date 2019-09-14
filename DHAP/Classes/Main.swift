@@ -80,6 +80,13 @@ public class Main {
                         statusElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(statusElement)
+                    case .textinput:
+                        let textInputElement = TextInputElement(frame: .zero)
+                        
+                        textInputElement.label.text = e.displaySettings.first
+                        textInputElement.button.setTitle(e.displaySettings[1], for: .normal)
+                        
+                        groupView.stackView.addArrangedSubview(textInputElement)
                     default:
                         break
                     }
