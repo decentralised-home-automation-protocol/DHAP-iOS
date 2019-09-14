@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonToggleElement" customModule="CocoaAsyncSocket" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonToggleElement" customModule="DHAP" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="v9y-Cf-S6A" id="KIo-1g-ngG"/>
                 <outlet property="label" destination="7w5-eY-O5e" id="bK1-HR-rxg"/>
@@ -23,7 +23,6 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-eY-O5e">
                     <rect key="frame" x="0.0" y="0.0" width="180" height="21"/>
-                    <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -36,7 +35,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.94242155370000003" green="1" blue="0.1619451345" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="7w5-eY-O5e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9yl-bJ-tfc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="v9y-Cf-S6A" secondAttribute="bottom" constant="8" id="9zM-rh-YpE"/>
