@@ -93,6 +93,13 @@ public class Main {
                         progressElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(progressElement)
+                    case .password:
+                        let passwordElement = PasswordElement(frame: .zero)
+                        
+                        passwordElement.label.text = e.displaySettings.first
+                        passwordElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
+                        
+                        groupView.stackView.addArrangedSubview(passwordElement)
                     default:
                         break
                     }

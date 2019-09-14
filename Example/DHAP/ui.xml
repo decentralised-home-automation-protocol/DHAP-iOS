@@ -73,5 +73,13 @@
             <status_location>1</status_location>
             <comment>Loading progression</comment>
         </gui_element>
+        
+        <gui_element id="1">
+            <type>password</type>
+            <disp_settings>Password,Submit</disp_settings>
+            <status_location>1</status_location>
+            <comment>Enter your password</comment>
+        </gui_element>
+
     </group>
 </device>

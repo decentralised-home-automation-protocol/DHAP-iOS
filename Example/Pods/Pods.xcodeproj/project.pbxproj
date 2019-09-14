@@ -35,6 +35,8 @@
 		8F7057B8232C89FC0001138C /* TextInputElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057B7232C89FC0001138C /* TextInputElement.xib */; };
 		8F7057BA232CB1F30001138C /* ProgressElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057B9232CB1F30001138C /* ProgressElement.swift */; };
 		8F7057BC232CB2430001138C /* ProgressElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057BB232CB2430001138C /* ProgressElement.xib */; };
+		8F7057BE232CB4870001138C /* PasswordElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057BD232CB4870001138C /* PasswordElement.swift */; };
+		8F7057C0232CB4980001138C /* PasswordElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057BF232CB4980001138C /* PasswordElement.xib */; };
 		8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */; };
 		8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEC23273AFE00130A9F /* ElementView.swift */; };
 		8F9C1AF923273B3C00130A9F /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE823273AFE00130A9F /* GroupElement.swift */; };
@@ -133,6 +135,8 @@
 		8F7057B7232C89FC0001138C /* TextInputElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextInputElement.xib; path = DHAP/Classes/TextInputElement.xib; sourceTree = "<group>"; };
 		8F7057B9232CB1F30001138C /* ProgressElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressElement.swift; path = DHAP/Classes/ProgressElement.swift; sourceTree = "<group>"; };
 		8F7057BB232CB2430001138C /* ProgressElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressElement.xib; path = DHAP/Classes/ProgressElement.xib; sourceTree = "<group>"; };
+		8F7057BD232CB4870001138C /* PasswordElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordElement.swift; path = DHAP/Classes/PasswordElement.swift; sourceTree = "<group>"; };
+		8F7057BF232CB4980001138C /* PasswordElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PasswordElement.xib; path = DHAP/Classes/PasswordElement.xib; sourceTree = "<group>"; };
 		8F9C1AE723273AFE00130A9F /* StepperElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepperElement.swift; path = DHAP/Classes/StepperElement.swift; sourceTree = "<group>"; };
 		8F9C1AE823273AFE00130A9F /* GroupElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
 		8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				8F7057B7232C89FC0001138C /* TextInputElement.xib */,
 				8F7057B9232CB1F30001138C /* ProgressElement.swift */,
 				8F7057BB232CB2430001138C /* ProgressElement.xib */,
+				8F7057BD232CB4870001138C /* PasswordElement.swift */,
+				8F7057BF232CB4980001138C /* PasswordElement.xib */,
 				8FD1350023272C4D005399F6 /* GUIElement.swift */,
 				6785C6C8D31CF5457BD7F19D22358F16 /* Device.swift */,
 				448AD81ED042EB81110D4847F24A6499 /* DeviceViewController.swift */,
@@ -576,6 +582,7 @@
 				8F9C1AFA23273B4100130A9F /* GroupElement.xib in Resources */,
 				8F7057BC232CB2430001138C /* ProgressElement.xib in Resources */,
 				8F9C1AFE23273B4F00130A9F /* ButtonToggleElement.xib in Resources */,
+				8F7057C0232CB4980001138C /* PasswordElement.xib in Resources */,
 				8F272F122327903100CA7D73 /* DirectionalButtonsElement.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +637,7 @@
 				8F9C1AFB23273B4600130A9F /* StepperElement.swift in Sources */,
 				8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */,
 				85887E018142EF2684A0FA4BD3622E5F /* DHAP-dummy.m in Sources */,
+				8F7057BE232CB4870001138C /* PasswordElement.swift in Sources */,
 				C26831956A1B161522D933DC6155EB07 /* DHAP.swift in Sources */,
 				D577F00C1EAB4B46327B7C89B9EDE0E5 /* Discovery.swift in Sources */,
 				49C253073772A002D16BF7202CA47446 /* Group.swift in Sources */,
