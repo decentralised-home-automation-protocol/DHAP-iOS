@@ -7,41 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		016668CE17FE1EB1BD2F65C3753AF608 /* DHAP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8140E2464B717B4C5052E2E567BA1F /* DHAP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		06D73B57F03CDEA9B667671966A198EE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A79F33DB9883C9321F1C90EA3DD6F /* Parser.swift */; };
-		0CAE3EC1C785C2F3BE91C5C04D66F9EB /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A25115D4F0B47711F92E05DDF9793B /* DeviceViewController.swift */; };
 		0EC1806437F66CC12F06DD7ACD1FBA4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6B030D0E7DA0B32C45F2CA5EF0AF7 /* Security.framework */; };
-		101465AC3DA0A85A7703AB9F8494C1B1 /* Discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8477305EA4B7BE6877EF6093675F75 /* Discovery.swift */; };
 		1207A1A31E513D4E23DA0D8CE84E140D /* Pods-DHAP_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD95662D9650372A7D0F9777A0B1FD2 /* Pods-DHAP_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14703875367641811BD5FE75ACD67C96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
 		1F292B5410B16DBF60D1F47A48216622 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		201F9A5DB139456EC2E01EDAA551D7DF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785C6C8D31CF5457BD7F19D22358F16 /* Device.swift */; };
 		20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C048F262F6A4130C49AD3954C4CCCD /* CFNetwork.framework */; };
 		204206B3BD0B4475D2F33FF78F9889C0 /* Pods-DHAP_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86569FF38E786B021185FE3DA32B67C4 /* Pods-DHAP_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20E89DCABC940622FF631B03B2E2BE68 /* UDPPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC810A61C7B36D6A2B1518E2B95CAA /* UDPPacket.swift */; };
-		22FB4015E97B12164F21106FBB0B4245 /* GUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA16748EE6A11CF8DC801BB7870DB86 /* GUIElement.swift */; };
+		214ACB107A4B5D1BC9E1E82BD6F1BEF8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */; };
 		2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3923EFC2BA50EAFF73B2F28AFE7431D5 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448AD81ED042EB81110D4847F24A6499 /* DeviceViewController.swift */; };
 		411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		446155D49A8F10D0A547EF9BEDFD6082 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
-		458BA6D9692E92FB15C2435EA54045AB /* DHAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D0852229A22954157B541377EC490 /* DHAP.swift */; };
-		6BA0EFD0CD02DB3C29C4EDB40D0E2008 /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D83447FCB3DB7B3D9221DC4DEB798 /* GroupElement.swift */; };
+		49C253073772A002D16BF7202CA47446 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445D12FEE5A1074DD1FA9627522F54CA /* Group.swift */; };
+		537F65A9525DEF77E10022E7AEA5F5A9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B469560B0C4CA13DA3C4685A8EF22F0F /* Parser.swift */; };
 		6C237B7AA6F4A2DD17CA05EB90C83362 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */; };
-		71B83A5C18A8ADF45E94C746A6A315D8 /* UDPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A37242F3B06181BF8AE9A16AE1CAD7 /* UDPHandler.swift */; };
-		725ED2A17D342E10A119C9D8C0AEAAA4 /* GroupElement.xib in Sources */ = {isa = PBXBuildFile; fileRef = 985DECB3B1C23A52304ADB523003420A /* GroupElement.xib */; };
-		95D2E23B15B5F22396579432A836C8B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
+		85887E018142EF2684A0FA4BD3622E5F /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A347C80B419A65CB809B86BFCE6BB463 /* DHAP-dummy.m */; };
+		8F15ED2A232DBDEE005DAF68 /* SchedularElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F15ED29232DBDEE005DAF68 /* SchedularElement.swift */; };
+		8F15ED2C232DBE08005DAF68 /* SchedularElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F15ED2B232DBE08005DAF68 /* SchedularElement.xib */; };
+		8F1ED52E232B00FC002A5976 /* SelectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1ED52D232B00FC002A5976 /* SelectionElement.swift */; };
+		8F1ED530232B011B002A5976 /* SelectionElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1ED52F232B011B002A5976 /* SelectionElement.xib */; };
+		8F272F0E23278DDC00CA7D73 /* RangeInputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F272F0D23278DDC00CA7D73 /* RangeInputElement.swift */; };
+		8F272F1023278E0A00CA7D73 /* RangeInputElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F272F0F23278E0A00CA7D73 /* RangeInputElement.xib */; };
+		8F272F122327903100CA7D73 /* DirectionalButtonsElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F272F112327903100CA7D73 /* DirectionalButtonsElement.xib */; };
+		8F272F142327904400CA7D73 /* DirectionalButtonsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F272F132327904400CA7D73 /* DirectionalButtonsElement.swift */; };
+		8F7057B2232C87270001138C /* StatusElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057B1232C87270001138C /* StatusElement.swift */; };
+		8F7057B4232C87480001138C /* StatusElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057B3232C87480001138C /* StatusElement.xib */; };
+		8F7057B6232C89DF0001138C /* TextInputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057B5232C89DF0001138C /* TextInputElement.swift */; };
+		8F7057B8232C89FC0001138C /* TextInputElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057B7232C89FC0001138C /* TextInputElement.xib */; };
+		8F7057BA232CB1F30001138C /* ProgressElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057B9232CB1F30001138C /* ProgressElement.swift */; };
+		8F7057BC232CB2430001138C /* ProgressElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057BB232CB2430001138C /* ProgressElement.xib */; };
+		8F7057BE232CB4870001138C /* PasswordElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057BD232CB4870001138C /* PasswordElement.swift */; };
+		8F7057C0232CB4980001138C /* PasswordElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057BF232CB4980001138C /* PasswordElement.xib */; };
+		8F7057C2232CBD010001138C /* ButtonGroupElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7057C1232CBD010001138C /* ButtonGroupElement.xib */; };
+		8F7057C4232CBD110001138C /* ButtonGroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7057C3232CBD110001138C /* ButtonGroupElement.swift */; };
+		8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */; };
+		8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEC23273AFE00130A9F /* ElementView.swift */; };
+		8F9C1AF923273B3C00130A9F /* GroupElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE823273AFE00130A9F /* GroupElement.swift */; };
+		8F9C1AFA23273B4100130A9F /* GroupElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEB23273AFE00130A9F /* GroupElement.xib */; };
+		8F9C1AFB23273B4600130A9F /* StepperElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AE723273AFE00130A9F /* StepperElement.swift */; };
+		8F9C1AFC23273B4800130A9F /* SwitchToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEA23273AFE00130A9F /* SwitchToggleElement.swift */; };
+		8F9C1AFD23273B4B00130A9F /* SwitchToggleElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C1AED23273AFE00130A9F /* SwitchToggleElement.xib */; };
+		8F9C1AFE23273B4F00130A9F /* ButtonToggleElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C1AEE23273AFE00130A9F /* ButtonToggleElement.xib */; };
+		8F9C1B0023273C5800130A9F /* StepperElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C1AFF23273C5800130A9F /* StepperElement.xib */; };
+		8FD1350123272C4D005399F6 /* GUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1350023272C4D005399F6 /* GUIElement.swift */; };
 		A283F6459B0797EC7FF4A178A6BD1C16 /* Pods-DHAP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EC16C95B74C5C54D38D03F5FE18CBA /* Pods-DHAP_Example-dummy.m */; };
-		B253E4620F43BF2F03E96D2E871CA59C /* ButtonToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D275B0A5CE0C4261CFEA2F252A681E30 /* ButtonToggleElement.swift */; };
+		A69FE79292A341762230A3248D77E530 /* UDPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35756F58DE0EEE068E7DFEA306B24272 /* UDPHandler.swift */; };
+		B34B2115E7034440EC90D5E6620E3D9A /* UDPPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE46E83CD60DF125BA14D97BE918954 /* UDPPacket.swift */; };
+		BF07AB8A814463BA308F55551FBCE250 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB50F114712381D9E0FF80AF8FDE89 /* Helpers.swift */; };
 		BF0E4454B28437897BC092AE02CD0C13 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D1280A81BADD72CBB11C88EA8E3E09DE /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCAC5286A08D4D182DAD0E98FA5DA9 /* Main.swift */; };
+		C26831956A1B161522D933DC6155EB07 /* DHAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35F9C51896E3BD995145690573DB2E /* DHAP.swift */; };
+		C4368A71E9B4D23103BC0F4E81A73078 /* PacketCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE190621E653DA3DC474C9DCD784A86 /* PacketCodes.swift */; };
+		D577F00C1EAB4B46327B7C89B9EDE0E5 /* Discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7673BB52DD3AEFD3D9F0E71BBC87FC0 /* Discovery.swift */; };
 		DD4A77CB6F2E775B1446A4DE3E3CC9F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
 		DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E34E06B4EF09DCB7897EBB137AF1CE9E /* DHAP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3FAD155179250DAA9C5DB76A9A2BFC /* DHAP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAFB901E5011ED87AE8D4FA841A498C5 /* Pods-DHAP_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C40045AF9FF0CE52816915506C0399 /* Pods-DHAP_Tests-dummy.m */; };
-		ED71555CACFBB750C4F25E238A5353AC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B145B93FC9AC1AECEFFD9A72396C353 /* Group.swift */; };
-		F30A6C81D0424D389F97050C92C2A38C /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 745550C538C9A3FDE0044E39B538CDA8 /* DHAP-dummy.m */; };
-		F75E540C1D037677ABE7BF904629D824 /* ButtonToggleElement.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC691FAD01670D83848400E3E18CA /* ButtonToggleElement.xib */; };
-		F7DCCB7E753D48E95F8BECD862C78610 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */; };
-		F7EFD25A84B97D7F8907344719DAC0F3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3908DB7B1BD455E013FCAE1FBC8DDBB /* Helpers.swift */; };
-		FB4089234CB7B75E55FFD104FFF19B1C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11B3FA2CAC7EAE7DB665920728F5A3A /* Device.swift */; };
-		FFCC5A22B54F1E2BCA6D8446269536E1 /* PacketCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584081A4783D450529EA95422887750A /* PacketCodes.swift */; };
+		F252FDA7E2B3D4498F956C2B2CAFEE8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484F037B807D7B1ECF003384573173D /* Foundation.framework */; };
+		FBBA3DC3682D9D35A8F61912447FBD97 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF99AD84118F3D6E6731F3325C4B75 /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +75,7 @@
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		7EB8D5C1BBDBF30EC8B633B23AC80DA1 /* PBXContainerItemProxy */ = {
+		8BC375A5418ECBCE0C6CEA05E9BFD53E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -77,65 +100,88 @@
 
 /* Begin PBXFileReference section */
 		01C40045AF9FF0CE52816915506C0399 /* Pods-DHAP_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHAP_Tests-dummy.m"; sourceTree = "<group>"; };
-		03C17BC0144FE8F4625E1CED846C1A49 /* DHAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DHAP.framework; path = DHAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		040816EABBE868EE25D7C40660FC5F24 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		0A1A79F33DB9883C9321F1C90EA3DD6F /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = DHAP/Classes/Parser.swift; sourceTree = "<group>"; };
-		0CA16748EE6A11CF8DC801BB7870DB86 /* GUIElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GUIElement.swift; path = DHAP/Classes/GUIElement.swift; sourceTree = "<group>"; };
-		0EBEC691FAD01670D83848400E3E18CA /* ButtonToggleElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonToggleElement.xib; path = DHAP/Classes/ButtonToggleElement.xib; sourceTree = "<group>"; };
-		0ECC810A61C7B36D6A2B1518E2B95CAA /* UDPPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDPPacket.swift; path = DHAP/Classes/UDPPacket.swift; sourceTree = "<group>"; };
+		03C17BC0144FE8F4625E1CED846C1A49 /* DHAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D2BC450C4A6B05397075508D93D9CE /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
-		163D21B06581F00390F256CE1D71245D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		19F6B030D0E7DA0B32C45F2CA5EF0AF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		1A038CE011D92FBB24CDECC76136CC85 /* Pods-DHAP_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Example-Info.plist"; sourceTree = "<group>"; };
-		1B1833CC1726E32531DCC92A487E0A6A /* Pods_DHAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHAP_Example.framework; path = "Pods-DHAP_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1833CC1726E32531DCC92A487E0A6A /* Pods_DHAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHAP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD141BDADC8619069B414BD49D580B6 /* Pods-DHAP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Example.release.xcconfig"; sourceTree = "<group>"; };
-		23FCAC5286A08D4D182DAD0E98FA5DA9 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Main.swift; path = DHAP/Classes/Main.swift; sourceTree = "<group>"; };
-		2B145B93FC9AC1AECEFFD9A72396C353 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = DHAP/Classes/Group.swift; sourceTree = "<group>"; };
+		1DEF99AD84118F3D6E6731F3325C4B75 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Main.swift; path = DHAP/Classes/Main.swift; sourceTree = "<group>"; };
 		2C8AF5C452DCD2E05CBB1EBEB98AB038 /* Pods-DHAP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CE190621E653DA3DC474C9DCD784A86 /* PacketCodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PacketCodes.swift; path = DHAP/Classes/PacketCodes.swift; sourceTree = "<group>"; };
 		30C048F262F6A4130C49AD3954C4CCCD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		37A37242F3B06181BF8AE9A16AE1CAD7 /* UDPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDPHandler.swift; path = DHAP/Classes/UDPHandler.swift; sourceTree = "<group>"; };
+		33DB50F114712381D9E0FF80AF8FDE89 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = DHAP/Classes/Helpers.swift; sourceTree = "<group>"; };
+		35756F58DE0EEE068E7DFEA306B24272 /* UDPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDPHandler.swift; path = DHAP/Classes/UDPHandler.swift; sourceTree = "<group>"; };
+		398961C0338D1ABE72B4FF51A55DF478 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		41EC16C95B74C5C54D38D03F5FE18CBA /* Pods-DHAP_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHAP_Example-dummy.m"; sourceTree = "<group>"; };
-		4C8D83447FCB3DB7B3D9221DC4DEB798 /* GroupElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
-		584081A4783D450529EA95422887750A /* PacketCodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PacketCodes.swift; path = DHAP/Classes/PacketCodes.swift; sourceTree = "<group>"; };
+		445D12FEE5A1074DD1FA9627522F54CA /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = DHAP/Classes/Group.swift; sourceTree = "<group>"; };
+		448AD81ED042EB81110D4847F24A6499 /* DeviceViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = DHAP/Classes/DeviceViewController.swift; sourceTree = "<group>"; };
+		6785C6C8D31CF5457BD7F19D22358F16 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = DHAP/Classes/Device.swift; sourceTree = "<group>"; };
 		694096DDFA3B5605BF5DF45B6B30C6C3 /* Pods-DHAP_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHAP_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A9C9F565674C5F38EAAB3B46266C62C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		6F14A5C07A11D5EFB29BB38FC7E4147D /* DHAP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DHAP.modulemap; sourceTree = "<group>"; };
-		745550C538C9A3FDE0044E39B538CDA8 /* DHAP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHAP-dummy.m"; sourceTree = "<group>"; };
-		761D7317DE7BBBBBE07A9CC1E717C132 /* DHAP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHAP-Info.plist"; sourceTree = "<group>"; };
+		6FE46E83CD60DF125BA14D97BE918954 /* UDPPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDPPacket.swift; path = DHAP/Classes/UDPPacket.swift; sourceTree = "<group>"; };
 		7CD95662D9650372A7D0F9777A0B1FD2 /* Pods-DHAP_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHAP_Example-umbrella.h"; sourceTree = "<group>"; };
 		85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
 		86569FF38E786B021185FE3DA32B67C4 /* Pods-DHAP_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHAP_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8D3FAD155179250DAA9C5DB76A9A2BFC /* DHAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-umbrella.h"; sourceTree = "<group>"; };
 		8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		985DECB3B1C23A52304ADB523003420A /* GroupElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GroupElement.xib; path = DHAP/Classes/GroupElement.xib; sourceTree = "<group>"; };
+		8F15ED29232DBDEE005DAF68 /* SchedularElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SchedularElement.swift; path = DHAP/Classes/SchedularElement.swift; sourceTree = "<group>"; };
+		8F15ED2B232DBE08005DAF68 /* SchedularElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SchedularElement.xib; path = DHAP/Classes/SchedularElement.xib; sourceTree = "<group>"; };
+		8F1ED52D232B00FC002A5976 /* SelectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectionElement.swift; path = DHAP/Classes/SelectionElement.swift; sourceTree = "<group>"; };
+		8F1ED52F232B011B002A5976 /* SelectionElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SelectionElement.xib; path = DHAP/Classes/SelectionElement.xib; sourceTree = "<group>"; };
+		8F272F0D23278DDC00CA7D73 /* RangeInputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RangeInputElement.swift; path = DHAP/Classes/RangeInputElement.swift; sourceTree = "<group>"; };
+		8F272F0F23278E0A00CA7D73 /* RangeInputElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RangeInputElement.xib; path = DHAP/Classes/RangeInputElement.xib; sourceTree = "<group>"; };
+		8F272F112327903100CA7D73 /* DirectionalButtonsElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DirectionalButtonsElement.xib; path = DHAP/Classes/DirectionalButtonsElement.xib; sourceTree = "<group>"; };
+		8F272F132327904400CA7D73 /* DirectionalButtonsElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DirectionalButtonsElement.swift; path = DHAP/Classes/DirectionalButtonsElement.swift; sourceTree = "<group>"; };
+		8F7057B1232C87270001138C /* StatusElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusElement.swift; path = DHAP/Classes/StatusElement.swift; sourceTree = "<group>"; };
+		8F7057B3232C87480001138C /* StatusElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatusElement.xib; path = DHAP/Classes/StatusElement.xib; sourceTree = "<group>"; };
+		8F7057B5232C89DF0001138C /* TextInputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextInputElement.swift; path = DHAP/Classes/TextInputElement.swift; sourceTree = "<group>"; };
+		8F7057B7232C89FC0001138C /* TextInputElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextInputElement.xib; path = DHAP/Classes/TextInputElement.xib; sourceTree = "<group>"; };
+		8F7057B9232CB1F30001138C /* ProgressElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressElement.swift; path = DHAP/Classes/ProgressElement.swift; sourceTree = "<group>"; };
+		8F7057BB232CB2430001138C /* ProgressElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressElement.xib; path = DHAP/Classes/ProgressElement.xib; sourceTree = "<group>"; };
+		8F7057BD232CB4870001138C /* PasswordElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordElement.swift; path = DHAP/Classes/PasswordElement.swift; sourceTree = "<group>"; };
+		8F7057BF232CB4980001138C /* PasswordElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PasswordElement.xib; path = DHAP/Classes/PasswordElement.xib; sourceTree = "<group>"; };
+		8F7057C1232CBD010001138C /* ButtonGroupElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ButtonGroupElement.xib; path = DHAP/Classes/ButtonGroupElement.xib; sourceTree = "<group>"; };
+		8F7057C3232CBD110001138C /* ButtonGroupElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonGroupElement.swift; path = DHAP/Classes/ButtonGroupElement.swift; sourceTree = "<group>"; };
+		8F9C1AE723273AFE00130A9F /* StepperElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepperElement.swift; path = DHAP/Classes/StepperElement.swift; sourceTree = "<group>"; };
+		8F9C1AE823273AFE00130A9F /* GroupElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupElement.swift; path = DHAP/Classes/GroupElement.swift; sourceTree = "<group>"; };
+		8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
+		8F9C1AEA23273AFE00130A9F /* SwitchToggleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchToggleElement.swift; path = DHAP/Classes/SwitchToggleElement.swift; sourceTree = "<group>"; };
+		8F9C1AEB23273AFE00130A9F /* GroupElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupElement.xib; path = DHAP/Classes/GroupElement.xib; sourceTree = "<group>"; };
+		8F9C1AEC23273AFE00130A9F /* ElementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementView.swift; path = DHAP/Classes/ElementView.swift; sourceTree = "<group>"; };
+		8F9C1AED23273AFE00130A9F /* SwitchToggleElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchToggleElement.xib; path = DHAP/Classes/SwitchToggleElement.xib; sourceTree = "<group>"; };
+		8F9C1AEE23273AFE00130A9F /* ButtonToggleElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ButtonToggleElement.xib; path = DHAP/Classes/ButtonToggleElement.xib; sourceTree = "<group>"; };
+		8F9C1AFF23273C5800130A9F /* StepperElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StepperElement.xib; path = DHAP/Classes/StepperElement.xib; sourceTree = "<group>"; };
+		8FD1350023272C4D005399F6 /* GUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GUIElement.swift; path = DHAP/Classes/GUIElement.swift; sourceTree = "<group>"; };
 		99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E8477305EA4B7BE6877EF6093675F75 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
-		A47D0852229A22954157B541377EC490 /* DHAP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHAP.swift; path = DHAP/Classes/DHAP.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A347C80B419A65CB809B86BFCE6BB463 /* DHAP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHAP-dummy.m"; sourceTree = "<group>"; };
 		A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		A905023E6DEC0CB3ACF18BC768C59C2E /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		B498AF6AE0621C706BD841BC372C25EB /* DHAP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHAP.xcconfig; sourceTree = "<group>"; };
+		B469560B0C4CA13DA3C4685A8EF22F0F /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = DHAP/Classes/Parser.swift; sourceTree = "<group>"; };
+		B56C0BEE01D006ED1AB803FFE70448BE /* DHAP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHAP.xcconfig; sourceTree = "<group>"; };
 		B71F2CB63C6A4802CAE0491E7135E04E /* Pods-DHAP_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Tests-Info.plist"; sourceTree = "<group>"; };
 		BA2FDDB8F4EA55EC94ADDAE8CBD9978B /* Pods-DHAP_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DHAP_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BDC6EE582D7D1A1A4133A97EF831A009 /* Pods-DHAP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C1A25115D4F0B47711F92E05DDF9793B /* DeviceViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = DHAP/Classes/DeviceViewController.swift; sourceTree = "<group>"; };
-		C3908DB7B1BD455E013FCAE1FBC8DDBB /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = DHAP/Classes/Helpers.swift; sourceTree = "<group>"; };
 		C393A70A9AA39323FE61651C4B0F66A6 /* Pods-DHAP_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C6D029DAA32C55A94A1C93C47624AF3A /* Pods-DHAP_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DHAP_Example.modulemap"; sourceTree = "<group>"; };
-		C7CF38362B18064A020B26424E6D7F26 /* DHAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DHAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D275B0A5CE0C4261CFEA2F252A681E30 /* ButtonToggleElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonToggleElement.swift; path = DHAP/Classes/ButtonToggleElement.swift; sourceTree = "<group>"; };
-		D41A55909077B2E653D8FAAB9A815719 /* DHAP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-prefix.pch"; sourceTree = "<group>"; };
+		CDB1F85DB939798064093991C9C40DD6 /* DHAP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DHAP.modulemap; sourceTree = "<group>"; };
+		CF054D203F115DB0B14EBE8E6A1653EC /* DHAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DHAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F6EC5EE2C4372CCC794BC4F5254803 /* Pods_DHAP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHAP_Tests.framework; path = "Pods-DHAP_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F6EC5EE2C4372CCC794BC4F5254803 /* Pods_DHAP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHAP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C1EC8675975D45AAD7936A484D2825 /* Pods-DHAP_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DEA17E24F689BAD69B80C9E2639F6EE9 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
-		E11B3FA2CAC7EAE7DB665920728F5A3A /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = DHAP/Classes/Device.swift; sourceTree = "<group>"; };
 		E484F037B807D7B1ECF003384573173D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E594149E958160129F0BB0219B586E54 /* Pods-DHAP_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHAP_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E7673BB52DD3AEFD3D9F0E71BBC87FC0 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
+		E7DDFE1888EA7FB7948702512AE3201C /* DHAP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-prefix.pch"; sourceTree = "<group>"; };
 		E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
-		EC8140E2464B717B4C5052E2E567BA1F /* DHAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-umbrella.h"; sourceTree = "<group>"; };
+		ED35F9C51896E3BD995145690573DB2E /* DHAP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHAP.swift; path = DHAP/Classes/DHAP.swift; sourceTree = "<group>"; };
 		F514E722EF203F612801B4FA185D49EF /* Pods-DHAP_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F89B89D08097CC189C89FF6E909EE609 /* DHAP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHAP-Info.plist"; sourceTree = "<group>"; };
 		FD05C97EF77143038AC67D5509997978 /* Pods-DHAP_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DHAP_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,15 +193,6 @@
 				20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */,
 				14703875367641811BD5FE75ACD67C96 /* Foundation.framework in Frameworks */,
 				0EC1806437F66CC12F06DD7ACD1FBA4A /* Security.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		292C87936321A12AC081AD73ADA56224 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7DCCB7E753D48E95F8BECD862C78610 /* CocoaAsyncSocket.framework in Frameworks */,
-				95D2E23B15B5F22396579432A836C8B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +212,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		749E229A756371BC370B3D71439F4767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				214ACB107A4B5D1BC9E1E82BD6F1BEF8 /* CocoaAsyncSocket.framework in Frameworks */,
+				F252FDA7E2B3D4498F956C2B2CAFEE8D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137FD3CAE1A61264C48B455F2E2C8D4C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CF054D203F115DB0B14EBE8E6A1653EC /* DHAP.podspec */,
+				398961C0338D1ABE72B4FF51A55DF478 /* LICENSE */,
+				6A9C9F565674C5F38EAAB3B46266C62C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		1A3E0EE19DF23E1AD41A79EC8048EC9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,26 +271,61 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4510898769C6A309F6A9D41BD91E6846 /* Support Files */ = {
+		5A4B5D9D21A47A1EEB33E29013836DA2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6F14A5C07A11D5EFB29BB38FC7E4147D /* DHAP.modulemap */,
-				B498AF6AE0621C706BD841BC372C25EB /* DHAP.xcconfig */,
-				745550C538C9A3FDE0044E39B538CDA8 /* DHAP-dummy.m */,
-				761D7317DE7BBBBBE07A9CC1E717C132 /* DHAP-Info.plist */,
-				D41A55909077B2E653D8FAAB9A815719 /* DHAP-prefix.pch */,
-				EC8140E2464B717B4C5052E2E567BA1F /* DHAP-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DHAP";
-			sourceTree = "<group>";
-		};
-		552C96A6C5F07DC99802D3B1B86DA519 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9446BC968AA8D30DD3E106EECDA73A3A /* DHAP */,
+				6B8FD5C6B066A6C87ED544E8573374E1 /* DHAP */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		6B8FD5C6B066A6C87ED544E8573374E1 /* DHAP */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C1AEC23273AFE00130A9F /* ElementView.swift */,
+				8F272F0D23278DDC00CA7D73 /* RangeInputElement.swift */,
+				8F272F0F23278E0A00CA7D73 /* RangeInputElement.xib */,
+				8F9C1AE923273AFE00130A9F /* ButtonToggleElement.swift */,
+				8F9C1AEE23273AFE00130A9F /* ButtonToggleElement.xib */,
+				8F9C1AE823273AFE00130A9F /* GroupElement.swift */,
+				8F9C1AEB23273AFE00130A9F /* GroupElement.xib */,
+				8F9C1AE723273AFE00130A9F /* StepperElement.swift */,
+				8F9C1AFF23273C5800130A9F /* StepperElement.xib */,
+				8F1ED52D232B00FC002A5976 /* SelectionElement.swift */,
+				8F1ED52F232B011B002A5976 /* SelectionElement.xib */,
+				8F9C1AEA23273AFE00130A9F /* SwitchToggleElement.swift */,
+				8F9C1AED23273AFE00130A9F /* SwitchToggleElement.xib */,
+				8F272F132327904400CA7D73 /* DirectionalButtonsElement.swift */,
+				8F272F112327903100CA7D73 /* DirectionalButtonsElement.xib */,
+				8F7057B1232C87270001138C /* StatusElement.swift */,
+				8F7057B3232C87480001138C /* StatusElement.xib */,
+				8F7057B5232C89DF0001138C /* TextInputElement.swift */,
+				8F7057C1232CBD010001138C /* ButtonGroupElement.xib */,
+				8F7057C3232CBD110001138C /* ButtonGroupElement.swift */,
+				8F7057B7232C89FC0001138C /* TextInputElement.xib */,
+				8F7057B9232CB1F30001138C /* ProgressElement.swift */,
+				8F7057BB232CB2430001138C /* ProgressElement.xib */,
+				8F7057BD232CB4870001138C /* PasswordElement.swift */,
+				8F7057BF232CB4980001138C /* PasswordElement.xib */,
+				8F15ED29232DBDEE005DAF68 /* SchedularElement.swift */,
+				8F15ED2B232DBE08005DAF68 /* SchedularElement.xib */,
+				8FD1350023272C4D005399F6 /* GUIElement.swift */,
+				6785C6C8D31CF5457BD7F19D22358F16 /* Device.swift */,
+				448AD81ED042EB81110D4847F24A6499 /* DeviceViewController.swift */,
+				ED35F9C51896E3BD995145690573DB2E /* DHAP.swift */,
+				E7673BB52DD3AEFD3D9F0E71BBC87FC0 /* Discovery.swift */,
+				445D12FEE5A1074DD1FA9627522F54CA /* Group.swift */,
+				33DB50F114712381D9E0FF80AF8FDE89 /* Helpers.swift */,
+				1DEF99AD84118F3D6E6731F3325C4B75 /* Main.swift */,
+				2CE190621E653DA3DC474C9DCD784A86 /* PacketCodes.swift */,
+				B469560B0C4CA13DA3C4685A8EF22F0F /* Parser.swift */,
+				35756F58DE0EEE068E7DFEA306B24272 /* UDPHandler.swift */,
+				6FE46E83CD60DF125BA14D97BE918954 /* UDPPacket.swift */,
+				137FD3CAE1A61264C48B455F2E2C8D4C /* Pod */,
+				823E5D54E4EF057191A039CF518C03E2 /* Support Files */,
+			);
+			name = DHAP;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7FEAACA735072EE3477EDB926FFA3E66 /* Targets Support Files */ = {
@@ -244,6 +335,20 @@
 				CEFD6D54360030FFA426F08630BBC99C /* Pods-DHAP_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		823E5D54E4EF057191A039CF518C03E2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDB1F85DB939798064093991C9C40DD6 /* DHAP.modulemap */,
+				B56C0BEE01D006ED1AB803FFE70448BE /* DHAP.xcconfig */,
+				A347C80B419A65CB809B86BFCE6BB463 /* DHAP-dummy.m */,
+				F89B89D08097CC189C89FF6E909EE609 /* DHAP-Info.plist */,
+				E7DDFE1888EA7FB7948702512AE3201C /* DHAP-prefix.pch */,
+				8D3FAD155179250DAA9C5DB76A9A2BFC /* DHAP-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DHAP";
 			sourceTree = "<group>";
 		};
 		8B66D2A83B3C862556E6C08280F315F2 /* iOS */ = {
@@ -256,32 +361,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9446BC968AA8D30DD3E106EECDA73A3A /* DHAP */ = {
-			isa = PBXGroup;
-			children = (
-				D275B0A5CE0C4261CFEA2F252A681E30 /* ButtonToggleElement.swift */,
-				0EBEC691FAD01670D83848400E3E18CA /* ButtonToggleElement.xib */,
-				E11B3FA2CAC7EAE7DB665920728F5A3A /* Device.swift */,
-				C1A25115D4F0B47711F92E05DDF9793B /* DeviceViewController.swift */,
-				A47D0852229A22954157B541377EC490 /* DHAP.swift */,
-				9E8477305EA4B7BE6877EF6093675F75 /* Discovery.swift */,
-				2B145B93FC9AC1AECEFFD9A72396C353 /* Group.swift */,
-				4C8D83447FCB3DB7B3D9221DC4DEB798 /* GroupElement.swift */,
-				985DECB3B1C23A52304ADB523003420A /* GroupElement.xib */,
-				0CA16748EE6A11CF8DC801BB7870DB86 /* GUIElement.swift */,
-				C3908DB7B1BD455E013FCAE1FBC8DDBB /* Helpers.swift */,
-				23FCAC5286A08D4D182DAD0E98FA5DA9 /* Main.swift */,
-				584081A4783D450529EA95422887750A /* PacketCodes.swift */,
-				0A1A79F33DB9883C9321F1C90EA3DD6F /* Parser.swift */,
-				37A37242F3B06181BF8AE9A16AE1CAD7 /* UDPHandler.swift */,
-				0ECC810A61C7B36D6A2B1518E2B95CAA /* UDPPacket.swift */,
-				C6A1F3FC57160BC46A008843D4778E0A /* Pod */,
-				4510898769C6A309F6A9D41BD91E6846 /* Support Files */,
-			);
-			name = DHAP;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		A49791B92A7781B859EAEEF581EE6D8B /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +370,6 @@
 				A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */,
 				B862B4264C2F1D9F87C12772C46C54AE /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -317,16 +395,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C6A1F3FC57160BC46A008843D4778E0A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C7CF38362B18064A020B26424E6D7F26 /* DHAP.podspec */,
-				040816EABBE868EE25D7C40660FC5F24 /* LICENSE */,
-				163D21B06581F00390F256CE1D71245D /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CEFD6D54360030FFA426F08630BBC99C /* Pods-DHAP_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,7 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				552C96A6C5F07DC99802D3B1B86DA519 /* Development Pods */,
+				5A4B5D9D21A47A1EEB33E29013836DA2 /* Development Pods */,
 				1A3E0EE19DF23E1AD41A79EC8048EC9E /* Frameworks */,
 				BB2BDAA8DB999C491DAC5EAE1CFDC78F /* Pods */,
 				34350BE4D714BAC3BC81BDE9BAD532F3 /* Products */,
@@ -366,11 +434,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B249E45BF5194370478F71A3F66E710C /* Headers */ = {
+		A34DFDE507254D4481A5BD862B012A1A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				016668CE17FE1EB1BD2F65C3753AF608 /* DHAP-umbrella.h in Headers */,
+				E34E06B4EF09DCB7897EBB137AF1CE9E /* DHAP-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,17 +483,17 @@
 		};
 		E23C2561A8C562343438D079CB4FF1A6 /* DHAP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CB83522CC539DCBE147BE7B17D4D873 /* Build configuration list for PBXNativeTarget "DHAP" */;
+			buildConfigurationList = 891F4656540743BDC6D134D044B7CC5E /* Build configuration list for PBXNativeTarget "DHAP" */;
 			buildPhases = (
-				B249E45BF5194370478F71A3F66E710C /* Headers */,
-				366B719A67DED0C4C0E927B1415E3DD4 /* Sources */,
-				292C87936321A12AC081AD73ADA56224 /* Frameworks */,
-				380752F867DDC09257E845C1BBC3378D /* Resources */,
+				A34DFDE507254D4481A5BD862B012A1A /* Headers */,
+				828C4D4D51ED94BD4B5BB9FC7BF34460 /* Sources */,
+				749E229A756371BC370B3D71439F4767 /* Frameworks */,
+				8C4DE7D68DB061393BF239BD809333CE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				126A27D3510A7BA75382301B045A7FD4 /* PBXTargetDependency */,
+				BEF7AD322D51E4275A82210C374D9DC4 /* PBXTargetDependency */,
 			);
 			name = DHAP;
 			productName = DHAP;
@@ -479,6 +547,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					6083682834ABE0AE7BD1CBF06CADD036 = {
+						LastSwiftMigration = 1030;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -501,17 +574,30 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		380752F867DDC09257E845C1BBC3378D /* Resources */ = {
+		5F26F2BC284BAACA6B633F08E7F4E8FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F26F2BC284BAACA6B633F08E7F4E8FB /* Resources */ = {
+		8C4DE7D68DB061393BF239BD809333CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7057B4232C87480001138C /* StatusElement.xib in Resources */,
+				8F1ED530232B011B002A5976 /* SelectionElement.xib in Resources */,
+				8F272F1023278E0A00CA7D73 /* RangeInputElement.xib in Resources */,
+				8F9C1B0023273C5800130A9F /* StepperElement.xib in Resources */,
+				8F7057B8232C89FC0001138C /* TextInputElement.xib in Resources */,
+				8F15ED2C232DBE08005DAF68 /* SchedularElement.xib in Resources */,
+				8F9C1AFD23273B4B00130A9F /* SwitchToggleElement.xib in Resources */,
+				8F9C1AFA23273B4100130A9F /* GroupElement.xib in Resources */,
+				8F7057BC232CB2430001138C /* ProgressElement.xib in Resources */,
+				8F9C1AFE23273B4F00130A9F /* ButtonToggleElement.xib in Resources */,
+				8F7057C0232CB4980001138C /* PasswordElement.xib in Resources */,
+				8F7057C2232CBD010001138C /* ButtonGroupElement.xib in Resources */,
+				8F272F122327903100CA7D73 /* DirectionalButtonsElement.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,30 +618,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		366B719A67DED0C4C0E927B1415E3DD4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B253E4620F43BF2F03E96D2E871CA59C /* ButtonToggleElement.swift in Sources */,
-				F75E540C1D037677ABE7BF904629D824 /* ButtonToggleElement.xib in Sources */,
-				FB4089234CB7B75E55FFD104FFF19B1C /* Device.swift in Sources */,
-				0CAE3EC1C785C2F3BE91C5C04D66F9EB /* DeviceViewController.swift in Sources */,
-				F30A6C81D0424D389F97050C92C2A38C /* DHAP-dummy.m in Sources */,
-				458BA6D9692E92FB15C2435EA54045AB /* DHAP.swift in Sources */,
-				101465AC3DA0A85A7703AB9F8494C1B1 /* Discovery.swift in Sources */,
-				ED71555CACFBB750C4F25E238A5353AC /* Group.swift in Sources */,
-				6BA0EFD0CD02DB3C29C4EDB40D0E2008 /* GroupElement.swift in Sources */,
-				725ED2A17D342E10A119C9D8C0AEAAA4 /* GroupElement.xib in Sources */,
-				22FB4015E97B12164F21106FBB0B4245 /* GUIElement.swift in Sources */,
-				F7EFD25A84B97D7F8907344719DAC0F3 /* Helpers.swift in Sources */,
-				D1280A81BADD72CBB11C88EA8E3E09DE /* Main.swift in Sources */,
-				FFCC5A22B54F1E2BCA6D8446269536E1 /* PacketCodes.swift in Sources */,
-				06D73B57F03CDEA9B667671966A198EE /* Parser.swift in Sources */,
-				71B83A5C18A8ADF45E94C746A6A315D8 /* UDPHandler.swift in Sources */,
-				20E89DCABC940622FF631B03B2E2BE68 /* UDPPacket.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		398D9830C2C4A6872C9EEC588214E124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,6 +636,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		828C4D4D51ED94BD4B5BB9FC7BF34460 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9C1AFC23273B4800130A9F /* SwitchToggleElement.swift in Sources */,
+				201F9A5DB139456EC2E01EDAA551D7DF /* Device.swift in Sources */,
+				8F272F0E23278DDC00CA7D73 /* RangeInputElement.swift in Sources */,
+				3923EFC2BA50EAFF73B2F28AFE7431D5 /* DeviceViewController.swift in Sources */,
+				8F7057C4232CBD110001138C /* ButtonGroupElement.swift in Sources */,
+				8F9C1AF723273B0100130A9F /* ButtonToggleElement.swift in Sources */,
+				8FD1350123272C4D005399F6 /* GUIElement.swift in Sources */,
+				8F7057BA232CB1F30001138C /* ProgressElement.swift in Sources */,
+				8F9C1AF923273B3C00130A9F /* GroupElement.swift in Sources */,
+				8F9C1AFB23273B4600130A9F /* StepperElement.swift in Sources */,
+				8F9C1AF823273B3600130A9F /* ElementView.swift in Sources */,
+				85887E018142EF2684A0FA4BD3622E5F /* DHAP-dummy.m in Sources */,
+				8F7057BE232CB4870001138C /* PasswordElement.swift in Sources */,
+				C26831956A1B161522D933DC6155EB07 /* DHAP.swift in Sources */,
+				D577F00C1EAB4B46327B7C89B9EDE0E5 /* Discovery.swift in Sources */,
+				49C253073772A002D16BF7202CA47446 /* Group.swift in Sources */,
+				BF07AB8A814463BA308F55551FBCE250 /* Helpers.swift in Sources */,
+				FBBA3DC3682D9D35A8F61912447FBD97 /* Main.swift in Sources */,
+				8F15ED2A232DBDEE005DAF68 /* SchedularElement.swift in Sources */,
+				C4368A71E9B4D23103BC0F4E81A73078 /* PacketCodes.swift in Sources */,
+				8F1ED52E232B00FC002A5976 /* SelectionElement.swift in Sources */,
+				537F65A9525DEF77E10022E7AEA5F5A9 /* Parser.swift in Sources */,
+				8F272F142327904400CA7D73 /* DirectionalButtonsElement.swift in Sources */,
+				8F7057B6232C89DF0001138C /* TextInputElement.swift in Sources */,
+				A69FE79292A341762230A3248D77E530 /* UDPHandler.swift in Sources */,
+				8F7057B2232C87270001138C /* StatusElement.swift in Sources */,
+				B34B2115E7034440EC90D5E6620E3D9A /* UDPPacket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE75A8577681CD2E635B915B4F4A9DF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,12 +681,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		126A27D3510A7BA75382301B045A7FD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 7EB8D5C1BBDBF30EC8B633B23AC80DA1 /* PBXContainerItemProxy */;
-		};
 		34E93048491B7E6CE12EF2F57F9A08A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DHAP;
@@ -603,6 +693,12 @@
 			target = EA709714523BC4891A4195C68160261E /* Pods-DHAP_Example */;
 			targetProxy = FFB9CDB9FEE0304B1E96CE15B3678D78 /* PBXContainerItemProxy */;
 		};
+		BEF7AD322D51E4275A82210C374D9DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 8BC375A5418ECBCE0C6CEA05E9BFD53E /* PBXContainerItemProxy */;
+		};
 		D2A7158CD60475639293E602C38A9A84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaAsyncSocket;
@@ -612,39 +708,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		046B9B083968BBF4050B2BB9B40A8386 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B498AF6AE0621C706BD841BC372C25EB /* DHAP.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DHAP/DHAP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DHAP/DHAP-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DHAP/DHAP.modulemap";
-				PRODUCT_MODULE_NAME = DHAP;
-				PRODUCT_NAME = DHAP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0F356803F0D95DFC363EF46E9F3C5E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BDC6EE582D7D1A1A4133A97EF831A009 /* Pods-DHAP_Example.debug.xcconfig */;
@@ -780,45 +843,12 @@
 			};
 			name = Release;
 		};
-		5415395B619E2F0E530DED0458DB17B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B498AF6AE0621C706BD841BC372C25EB /* DHAP.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DHAP/DHAP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DHAP/DHAP-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DHAP/DHAP.modulemap";
-				PRODUCT_MODULE_NAME = DHAP;
-				PRODUCT_NAME = DHAP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		75694521DF44E9C45682A3EA115F23BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -887,6 +917,7 @@
 			baseConfigurationReference = 85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -907,12 +938,47 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A106668D6F54C7B41777B8C8FBDED37A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56C0BEE01D006ED1AB803FFE70448BE /* DHAP.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DHAP/DHAP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DHAP/DHAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DHAP/DHAP.modulemap";
+				PRODUCT_MODULE_NAME = DHAP;
+				PRODUCT_NAME = DHAP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		C65C00024ABFEAC833388E69576AC2F5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -949,6 +1015,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		C6ED3E1ABCE0C530394409586813691E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56C0BEE01D006ED1AB803FFE70448BE /* DHAP.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DHAP/DHAP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DHAP/DHAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DHAP/DHAP.modulemap";
+				PRODUCT_MODULE_NAME = DHAP;
+				PRODUCT_NAME = DHAP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1003,8 +1102,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1040,11 +1138,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CB83522CC539DCBE147BE7B17D4D873 /* Build configuration list for PBXNativeTarget "DHAP" */ = {
+		891F4656540743BDC6D134D044B7CC5E /* Build configuration list for PBXNativeTarget "DHAP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				046B9B083968BBF4050B2BB9B40A8386 /* Debug */,
-				5415395B619E2F0E530DED0458DB17B5 /* Release */,
+				C6ED3E1ABCE0C530394409586813691E /* Debug */,
+				A106668D6F54C7B41777B8C8FBDED37A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

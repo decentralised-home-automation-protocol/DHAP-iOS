@@ -13,9 +13,10 @@ enum Schema: String {
 
 class Parser: NSObject, XMLParserDelegate {
     
-    private var currentElement: String = ""
-    private var currentElementType: String = ""
-    private var currentElementLabel: String = ""
+    private var currentGroupLabel = String()
+    private var currentElement = String()
+    private var currentElementType = String()
+    private var currentElementDisplaySettings = [String]()
     
     private var groups = [Group]()
     private var guiElements = [GUIElement]()
@@ -41,7 +42,11 @@ class Parser: NSObject, XMLParserDelegate {
         
         if currentElement == "gui_element" {
             currentElementType = ""
-            currentElementLabel = ""
+            currentElementDisplaySettings.removeAll()
+        }
+        
+        if elementName == "group" {
+            currentGroupLabel = ""
         }
         
         currentElement = elementName
@@ -49,8 +54,16 @@ class Parser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentElement {
-        case "type": currentElementType += string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        case "label": currentElementLabel += string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        case "label":
+            currentGroupLabel += string.trimmingCharacters(in: .whitespacesAndNewlines)
+        case "type":
+            currentElementType += string.trimmingCharacters(in: .whitespacesAndNewlines)
+        case "disp_settings":
+            let displaySettingsString = string.trimmingCharacters(in: .whitespacesAndNewlines)
+            let displaySettings = displaySettingsString.split(separator: ",")
+            for setting in displaySettings {
+                currentElementDisplaySettings.append(String(setting))
+            }
         default: break
         }
     }
@@ -60,11 +73,11 @@ class Parser: NSObject, XMLParserDelegate {
         switch elementName {
         case "gui_element":
             if let type = GUIElementType(rawValue: currentElementType) {
-                let guiElement = GUIElement(type: type, label: currentElementLabel)
+                let guiElement = GUIElement(type: type, displaySettings: currentElementDisplaySettings)
                 self.guiElements.append(guiElement)
             }
         case "group":
-            let group = Group(elements: guiElements)
+            let group = Group(label: currentGroupLabel, elements: guiElements)
             self.groups.append(group)
             guiElements = []
         default: break

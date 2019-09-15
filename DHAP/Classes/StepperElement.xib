@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepperElement" customModule="DHAP" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="f8a-Jh-fcC" id="vo0-y4-MRJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="209" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8a-Jh-fcC">
+                    <rect key="frame" x="8" y="8" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nlv-VP-Mm8">
+                    <rect key="frame" x="58" y="8" width="94" height="29"/>
+                    <connections>
+                        <action selector="onChange:" destination="-1" eventType="valueChanged" id="5Ln-aL-XBM"/>
+                    </connections>
+                </stepper>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f8a-Jh-fcC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Icu-a8-kfY"/>
+                <constraint firstItem="nlv-VP-Mm8" firstAttribute="leading" secondItem="f8a-Jh-fcC" secondAttribute="trailing" constant="8" id="NeU-wa-YD1"/>
+                <constraint firstItem="f8a-Jh-fcC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="cLB-pl-wDE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nlv-VP-Mm8" secondAttribute="bottom" constant="8" id="ctK-wN-1Fp"/>
+                <constraint firstItem="nlv-VP-Mm8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="dH3-cy-90v"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-34.399999999999999" y="188.45577211394306"/>
+        </view>
+    </objects>
+</document>

@@ -23,17 +23,108 @@ public class Main {
                 
                 print("Group Start")
                 let groupView = GroupElement()
+                groupView.label.text = g.label
                 
                 for e in g.elements {
-                    print("type: \(e.type.rawValue), label: \(e.label)")
+                    print("type: \(e.type.rawValue), label: \(e.displaySettings)")
                     
-                    if e.type == .toggle {
-                        let buttonToggleElement = ButtonToggleElement(frame: CGRect(x: 0, y: 0, width: 150, height: 100))
+                    switch e.type {
+                    case .buttontoggle:
+                        let buttonToggleElement = ButtonToggleElement(frame: .zero)
                         
                         buttonToggleElement.button.setTitle("OFF", for: .normal)
-                        buttonToggleElement.label.text = e.label
+                        buttonToggleElement.label.text = e.displaySettings.first
                         
                         groupView.stackView.addArrangedSubview(buttonToggleElement)
+                    case .switchtoggle:
+                        let switchToggleElement = SwitchToggleElement(frame: .zero)
+                        
+                        switchToggleElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(switchToggleElement)
+                    case .stepper:
+                        let stepperElement = StepperElement(frame: .zero)
+                        
+                        stepperElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(stepperElement)
+                    case .rangeinput:
+                        let rangeInputElement = RangeInputElement(frame: .zero)
+                        
+                        rangeInputElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(rangeInputElement)
+                    case .directionalbuttons:
+                        let directionalButtonsElement = DirectionalButtonsElement(frame: .zero)
+                        
+                        directionalButtonsElement.label.text = e.displaySettings.first
+                        
+                        directionalButtonsElement.topButton.setTitle(e.displaySettings[1], for: .normal)
+                        directionalButtonsElement.rightButton.setTitle(e.displaySettings[2], for: .normal)
+                        directionalButtonsElement.bottomButton.setTitle(e.displaySettings[3], for: .normal)
+                        directionalButtonsElement.leftButton.setTitle(e.displaySettings[4], for: .normal)
+                        
+                        groupView.stackView.addArrangedSubview(directionalButtonsElement)
+                    case .selection:
+                        let selectionElement = SelectionElement(frame: .zero)
+                        
+                        selectionElement.label.text = e.displaySettings.first
+                        
+                        let data = e.displaySettings
+                        selectionElement.data = Array(data.dropFirst())
+                        
+                        groupView.stackView.addArrangedSubview(selectionElement)
+                    case .status:
+                        let statusElement = StatusElement(frame: .zero)
+                        
+                        statusElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(statusElement)
+                    case .textinput:
+                        let textInputElement = TextInputElement(frame: .zero)
+                        
+                        textInputElement.label.text = e.displaySettings.first
+                        textInputElement.button.setTitle(e.displaySettings[1], for: .normal)
+                        
+                        groupView.stackView.addArrangedSubview(textInputElement)
+                    case .progress:
+                        let progressElement = ProgressElement(frame: .zero)
+                        
+                        progressElement.label.text = e.displaySettings.first
+                        
+                        groupView.stackView.addArrangedSubview(progressElement)
+                    case .buttongroup:
+                        let buttonGroupElement = ButtonGroupElement(frame: .zero)
+                        
+                        buttonGroupElement.label.text = e.displaySettings.first
+                        
+                        // create buttons
+                        let buttonLabels = e.displaySettings.dropFirst()
+                        for buttonLabel in buttonLabels {
+                            let button = UIButton()
+                            button.setTitleColor(groupView.tintColor, for: .normal)
+                            button.setTitle(buttonLabel, for: .normal)
+                            buttonGroupElement.stackView.addArrangedSubview(button)
+                        }
+                        
+                        groupView.stackView.addArrangedSubview(buttonGroupElement)
+                    case .scheduler:
+                        let schedularElement = SchedularElement(frame: .zero)
+                        
+                        let data = e.displaySettings
+                        
+                        schedularElement.label.text = e.displaySettings.first
+                        schedularElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
+                        
+                        
+                        groupView.stackView.addArrangedSubview(schedularElement)
+                    case .password:
+                        let passwordElement = PasswordElement(frame: .zero)
+                        
+                        passwordElement.label.text = e.displaySettings.first
+                        passwordElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
+                        
+                        groupView.stackView.addArrangedSubview(passwordElement)
                     }
                     
                 }
