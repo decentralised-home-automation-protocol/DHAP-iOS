@@ -92,5 +92,12 @@
             <disp_settings>Numpad,1,2,3,4</disp_settings>
             <comment>Numpad</comment>
         </gui_element>
+        
+        <gui_element id="1">
+            <type>scheduler</type>
+            <disp_settings>Schedule an event,Submit,Mon,Tue,Wed,Thu,Fri</disp_settings>
+            <status_location>1</status_location>
+            <comment>Event scheduler</comment>
+        </gui_element>
     </group>
 </device>

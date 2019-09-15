@@ -108,6 +108,16 @@ public class Main {
                         }
                         
                         groupView.stackView.addArrangedSubview(buttonGroupElement)
+                    case .scheduler:
+                        let schedularElement = SchedularElement(frame: .zero)
+                        
+                        let data = e.displaySettings
+                        
+                        schedularElement.label.text = e.displaySettings.first
+                        schedularElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
+                        
+                        
+                        groupView.stackView.addArrangedSubview(schedularElement)
                     case .password:
                         let passwordElement = PasswordElement(frame: .zero)
                         
@@ -115,8 +125,6 @@ public class Main {
                         passwordElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
                         
                         groupView.stackView.addArrangedSubview(passwordElement)
-                    default:
-                        break
                     }
                     
                 }
