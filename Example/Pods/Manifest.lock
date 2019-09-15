@@ -1,6 +1,6 @@
 PODS:
   - CocoaAsyncSocket (7.6.3)
-  - DHAP (0.1.0):
+  - DHAP (0.2.0):
     - CocoaAsyncSocket
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  DHAP: 6301c0f5d7a819e92eb5d8a3fdaecd8057924200
+  DHAP: 045efa312667ce8e0a9669ea44f05c17637d4807
 
 PODFILE CHECKSUM: 83e3e48a3097b6e460e6f9c1af5530b7789e8b61
 
