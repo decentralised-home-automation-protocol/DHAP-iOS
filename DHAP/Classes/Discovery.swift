@@ -14,26 +14,30 @@ public enum DevicesResult {
     case failure(Error)
 }
 
-public class Discovery: UDPHandlerDelegate {
+class Discovery: UDPHandlerDelegate {
     
-    var udpHandler: UDPHandler?
+    private let udpHandler: UDPHandler
     
     private var censusList = [Device]()
     private var previousCensusList = [Device]()
     
     private var repliedDevices = [Device]()
     
-    public init() {
-        udpHandler = UDPHandler()
-        udpHandler?.delegate = self
+    init(udpHandler: UDPHandler) {
+        self.udpHandler = udpHandler
+        udpHandler.delegate = self
     }
     
-    public func discover(_ completion: @escaping (DevicesResult) -> Void) {
+    func discover(_ completion: @escaping (DevicesResult) -> Void) {
         DispatchQueue.global(qos: .utility).async {
             do {
                 try self.findDevices()
                 
                 if self.censusList.count > 0 {
+                    
+                    // request header information from each device
+                    self.getDeviceHeaders()
+                    
                     completion(.foundDevices(self.censusList))
                 } else {
                     completion(.noDevicesFound)
@@ -51,16 +55,16 @@ public class Discovery: UDPHandlerDelegate {
         while true {
             broadcastList()
             
-            let testDGroup = DispatchGroup()
+            let timeoutDispatchGroup = DispatchGroup()
             
-            testDGroup.enter()
+            timeoutDispatchGroup.enter()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                 print("should stop receiving now")
-                testDGroup.leave()
+                timeoutDispatchGroup.leave()
             }
             
-            testDGroup.wait()
+            timeoutDispatchGroup.wait()
             // end listen for replies
             
             print("Received (\(repliedDevices.count)) replies.")
@@ -100,7 +104,7 @@ public class Discovery: UDPHandlerDelegate {
     private func broadcastList() {
         print("Broadcasting list...")
         
-        var censusListString = PacketCodes.discovery
+        var censusListString = String(PacketCodes.discoveryRequest.hashValue)
         
         if censusList.count > 0 {
             censusListString += "|"
@@ -114,11 +118,48 @@ public class Discovery: UDPHandlerDelegate {
         let data = censusListString.data(using: .utf8)!
         
         let packet = UDPPacket(data: data, port: 8888)
-        udpHandler?.sendBroadcastPacket(packet: packet)
+        udpHandler.sendBroadcastPacket(packet: packet)
+    }
+    
+    private func getDeviceHeaders() {
+        // go through each device in the censuslist and request header from it
+        // check if any device still doesnt have a header then repeat for those devices
+        previousCensusList.removeAll()
+        var devicesWithoutHeader = censusList
+        
+        var timeout = 10
+        
+        while devicesWithoutHeader.count > 0 && timeout > 0 {
+            previousCensusList.removeAll()
+            
+            for device in devicesWithoutHeader {
+                let data = String(PacketCodes.discoveryHeaderRequest.hashValue).data(using: .utf8)!
+                let packet = UDPPacket(data: data, host: device.ipAddress, port: 8888)
+                udpHandler.sendPacket(packet: packet)
+                
+                // sleep
+                let timeoutDispatchGroup = DispatchGroup()
+                
+                timeoutDispatchGroup.enter()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+                    timeoutDispatchGroup.leave()
+                }
+                
+                timeoutDispatchGroup.wait()
+            }
+            
+            devicesWithoutHeader.removeAll { (device) -> Bool in
+                return previousCensusList.contains(device)
+            }
+            previousCensusList.removeAll()
+            timeout -= 1
+        }
     }
     
     private func parsePacket(data: Data, remoteAddress: String) {
-        let packetString = String(data: data, encoding: .utf8)!
+        
+        guard let packetString = String(data: data, encoding: .utf8) else { return }
         
         print("Packet data: \(packetString)")
         
@@ -134,21 +175,45 @@ public class Discovery: UDPHandlerDelegate {
         repliedDevices.append(device)
     }
     
-    func packetReceived(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data) {
-        guard let senderAddress = Helper.shared().parseRemoteAddress(remoteAddress: address) else {
+    private func addDeviceHeader(data: Data, fromAddress: String) {
+        let headerData = String(data: data, encoding: .utf8)!.split(separator: ",")
+        
+        for var device in censusList {
+            if device.ipAddress == fromAddress {
+                device.name = String(headerData[0])
+                device.location = String(headerData[1])
+                previousCensusList.append(device)
+                return
+            }
+        }
+    }
+    
+    func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes,
+                        data: Data, fromAddress address: Data) {
+        
+        guard let senderAddress = Helpers.parseRemoteAddress(remoteAddress: address) else {
             return
         }
 
-        guard let strIPAddress = Helper.shared().getIPAddress() else {
+        guard let strIPAddress = Helpers.getIPAddress() else {
             return
         }
 
         if strIPAddress == senderAddress {
             print("Received packet from \(senderAddress)")
             print("\tthis must be broadcast packet, ignore.")
-        } else {
-            print("Received packet from \(senderAddress)")
+            return
+        }
+        
+        print("Received packet from \(senderAddress)")
+        
+        switch packetCode {
+        case .discoveryResponse:
             parsePacket(data: data, remoteAddress: senderAddress)
+        case .discoveryHeaderRespone:
+            addDeviceHeader(data: data, fromAddress: senderAddress)
+        default:
+            return
         }
     }
 

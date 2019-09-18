@@ -7,19 +7,9 @@
 
 import Foundation
 
-class Helper {
+class Helpers {
     
-    private static var sharedHelper: Helper = {
-        let helper = Helper()
-        
-        return helper
-    }()
-    
-    class func shared() -> Helper {
-        return sharedHelper
-    }
-    
-    func parseRemoteAddress(remoteAddress: Data) -> String? {
+    static func parseRemoteAddress(remoteAddress: Data) -> String? {
         var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
         do {
             try remoteAddress.withUnsafeBytes { (pointer: UnsafePointer<sockaddr>) -> Void in
@@ -40,7 +30,7 @@ class Helper {
         return address
     }
     
-    func getIPAddress() -> String? {
+    static func getIPAddress() -> String? {
         var address: String?
         var ifaddr: UnsafeMutablePointer<ifaddrs>? = nil
         
