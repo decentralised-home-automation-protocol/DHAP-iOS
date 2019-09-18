@@ -1,6 +1,6 @@
 {
   "name": "DHAP",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "summary": "Decentralised Home Automation Protocol",
   "description": "An open home automation protocol that removes the need for a central controller, proprietary hardware and software.",
   "homepage": "https://github.com/aidengaripoli/DHAP",
@@ -12,8 +12,8 @@
     "aidengaripoli": "aidosgaripoli@gmail.com"
   },
   "source": {
-    "git": "https://github.com/aidengaripoli/DHAP.git",
-    "tag": "0.2.0"
+    "git": "https://github.com/aidengaripoli/DHAP-iOS.git",
+    "tag": "0.2.1"
   },
   "platforms": {
     "ios": "12"

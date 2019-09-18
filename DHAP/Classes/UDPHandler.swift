@@ -9,7 +9,7 @@ import Foundation
 import CocoaAsyncSocket
 
 protocol UDPHandlerDelegate {
-    func packetReceived(_ handler: UDPHandler, didReceive data: Data, fromAddress address: Data)
+    func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes, data: Data, fromAddress address: Data)
 }
 
 class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
@@ -67,11 +67,18 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data,
                           fromAddress address: Data, withFilterContext filterContext: Any?) {
         
+        guard let dataString = String(data: data, encoding: .utf8) else { return }
+        
         print("received packet")
-        let dataString = String(data: data, encoding: .utf8)!
         print("\(dataString)")
         
-        delegate?.packetReceived(self, didReceive: data, fromAddress: address)
+        let codeString = String(dataString.split(separator: "|")[0])
+        
+        guard let code = Int(codeString) else { return }
+        
+        guard let packetCode = PacketCodes(rawValue: code) else { return }
+        
+        delegate?.packetReceived(self, packetCode: packetCode, data: data, fromAddress: address)
         
     }
     

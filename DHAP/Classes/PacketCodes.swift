@@ -7,10 +7,13 @@
 
 import Foundation
 
-enum PacketCodes {
+enum PacketCodes: Int {
+
+    case discoveryRequest = 300
+    case discoveryResponse = 310
+    case discoveryHeaderRequest = 320
+    case discoveryHeaderRespone = 330
     
-    static let discovery = "300"
-    
-    static let uiRequest = "200"
-    
+    case uiRequest = 200
+
 }

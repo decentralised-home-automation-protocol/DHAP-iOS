@@ -13,7 +13,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var deviceTableView: UITableView!
     
-    var discovery: Discovery?
     var dhap: DHAP?
     
     var devices = [Device]()
@@ -21,22 +20,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        discovery = Discovery()
         dhap = DHAP()
         
         deviceTableView.dataSource = self
         deviceTableView.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func refreshDeviceList(_ sender: Any) {
         print("Refresh Device List")
         
-        discovery?.discover({ (result) in
+        dhap?.discoverDevices { (result) in
             switch result {
             case .foundDevices(let devices):
                 print("Devices: \(devices)")
@@ -49,7 +42,7 @@ class ViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
-        })
+        }
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
