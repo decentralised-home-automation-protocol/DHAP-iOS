@@ -104,7 +104,7 @@ class Discovery: UDPHandlerDelegate {
     private func broadcastList() {
         print("Broadcasting list...")
         
-        var censusListString = String(PacketCodes.discoveryRequest.hashValue)
+        var censusListString = String(PacketCodes.discoveryRequest.rawValue)
         
         if censusList.count > 0 {
             censusListString += "|"
@@ -133,7 +133,7 @@ class Discovery: UDPHandlerDelegate {
             previousCensusList.removeAll()
             
             for device in devicesWithoutHeader {
-                let data = String(PacketCodes.discoveryHeaderRequest.hashValue).data(using: .utf8)!
+                let data = String(PacketCodes.discoveryHeaderRequest.rawValue).data(using: .utf8)!
                 let packet = UDPPacket(data: data, host: device.ipAddress, port: 8888)
                 udpHandler.sendPacket(packet: packet)
                 
@@ -148,6 +148,8 @@ class Discovery: UDPHandlerDelegate {
                 
                 timeoutDispatchGroup.wait()
             }
+            
+            devicesWithoutHeader = censusList
             
             devicesWithoutHeader.removeAll { (device) -> Bool in
                 return previousCensusList.contains(device)
@@ -178,11 +180,11 @@ class Discovery: UDPHandlerDelegate {
     private func addDeviceHeader(data: Data, fromAddress: String) {
         let headerData = String(data: data, encoding: .utf8)!.split(separator: ",")
         
-        for var device in censusList {
-            if device.ipAddress == fromAddress {
-                device.name = String(headerData[0])
-                device.location = String(headerData[1])
-                previousCensusList.append(device)
+        for i in 0..<censusList.count {
+            if censusList[i].ipAddress == fromAddress {
+                censusList[i].name = String(headerData[1])
+                censusList[i].location = String(headerData[2])
+                previousCensusList.append(censusList[i])
                 return
             }
         }

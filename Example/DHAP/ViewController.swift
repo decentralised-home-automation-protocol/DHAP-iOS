@@ -77,7 +77,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let device = devices[indexPath.row]
         
-        cell.textLabel?.text = device.macAddress
+        cell.textLabel?.text = device.name
         
         return cell
     }
