@@ -78,6 +78,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let device = devices[indexPath.row]
         
         cell.textLabel?.text = device.name
+        cell.detailTextLabel?.text = device.location
         
         return cell
     }
