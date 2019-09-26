@@ -111,8 +111,6 @@ public class Main {
                     case .scheduler:
                         let schedularElement = SchedularElement(frame: .zero)
                         
-                        let data = e.displaySettings
-                        
                         schedularElement.label.text = e.displaySettings.first
                         schedularElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
                         
