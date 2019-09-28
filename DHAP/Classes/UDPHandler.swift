@@ -9,7 +9,7 @@ import Foundation
 import CocoaAsyncSocket
 
 protocol UDPHandlerDelegate {
-    func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes, data: Data, fromAddress address: Data)
+    func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes, packetData: Data?, fromAddress: Data)
 }
 
 class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
@@ -19,12 +19,6 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     private var socket: GCDAsyncUdpSocket?
     
     var delegate: UDPHandlerDelegate?
-    
-//    private static var sharedUdpHandler: UDPHandler = {
-//        let udpHandler = UDPHandler()
-//
-//        return udpHandler
-//    }()
     
     override init() {
         super.init()
@@ -40,10 +34,6 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
         }
     }
     
-//    class func shared() -> UDPHandler {
-//        return sharedUdpHandler
-//    }
-    
     func sendPacket(packet: UDPPacket) {
         socket?.send(packet.data, toHost: packet.host!, port: packet.port, withTimeout: 0, tag: 0)
     }
@@ -51,8 +41,6 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     func sendBroadcastPacket(packet: UDPPacket) {
         socket?.send(packet.data, toHost: broadcastAddress, port: packet.port, withTimeout: 0, tag: 0)
     }
-    
-    
     
     func sendPacketForReply(packet: UDPPacket, retries: Int) {
         
@@ -67,18 +55,21 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data,
                           fromAddress address: Data, withFilterContext filterContext: Any?) {
         
-        guard let dataString = String(data: data, encoding: .utf8) else { return }
+        guard let packetString = String(data: data, encoding: .utf8) else { return }
         
         print("received packet")
-        print("\(dataString)")
+        print("\(packetString)")
         
-        let codeString = String(dataString.split(separator: "|")[0])
-        
-        guard let code = Int(codeString) else { return }
-        
+        let packet = packetString.split(separator: "|")
+        guard let codeString = packet.first, let code = Int(codeString) else { return }
+
+        let dataString: String? = String(packetString.split(separator: "|")[1])
+
         guard let packetCode = PacketCodes(rawValue: code) else { return }
-        
-        delegate?.packetReceived(self, packetCode: packetCode, data: data, fromAddress: address)
+
+        let contents = dataString?.data(using: .utf8)
+
+        delegate?.packetReceived(self, packetCode: packetCode, packetData: contents, fromAddress: address)
         
     }
     

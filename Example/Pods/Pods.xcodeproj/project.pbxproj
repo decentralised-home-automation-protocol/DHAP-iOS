@@ -39,6 +39,7 @@
 		8665251AAB4D84CD436644CBA0D9D59A /* RangeInputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A2AEECF092D3A187A4E7E86889A27 /* RangeInputElement.swift */; };
 		8C6067C33C678C0ED420CDFC6C4294CA /* SwitchToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597BCE9B0D5B483968220394A79DC01 /* SwitchToggleElement.swift */; };
 		8D998150F38A0B60E73D6F0B153EBFF2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34B3F7ED7E78FECDA6D024D4918D8D /* Group.swift */; };
+		8F1D912B233F480F004F27F7 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D912A233F480F004F27F7 /* Display.swift */; };
 		A283F6459B0797EC7FF4A178A6BD1C16 /* Pods-DHAP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EC16C95B74C5C54D38D03F5FE18CBA /* Pods-DHAP_Example-dummy.m */; };
 		A4DAC22DCAF46E7C8535BCC835225FB0 /* DHAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B64A5CBCEB54A3E61A5F3F36E3A000 /* DHAP.swift */; };
 		A75CB65F708C6498964976D9DD062BFB /* DHAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BAFF20F05759E9C7F1E2839D30CA7 /* DHAP-dummy.m */; };
@@ -100,7 +101,7 @@
 
 /* Begin PBXFileReference section */
 		01C40045AF9FF0CE52816915506C0399 /* Pods-DHAP_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHAP_Tests-dummy.m"; sourceTree = "<group>"; };
-		03C17BC0144FE8F4625E1CED846C1A49 /* DHAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DHAP.framework; path = DHAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03C17BC0144FE8F4625E1CED846C1A49 /* DHAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0597BCE9B0D5B483968220394A79DC01 /* SwitchToggleElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchToggleElement.swift; path = DHAP/Classes/SwitchToggleElement.swift; sourceTree = "<group>"; };
 		067CF0BD6F044D1099BBDE2E660AA1D3 /* DHAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-umbrella.h"; sourceTree = "<group>"; };
 		0681A02B06E2DD308119C7BCAA9FAF50 /* ButtonGroupElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonGroupElement.swift; path = DHAP/Classes/ButtonGroupElement.swift; sourceTree = "<group>"; };
@@ -109,13 +110,13 @@
 		09EE9C1B3ED6CFB04A6234AC71C8727B /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = DHAP/Classes/Helpers.swift; sourceTree = "<group>"; };
 		0CA10CBF2486C20FABDA832F5892D6AA /* RangeInputElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = RangeInputElement.xib; path = DHAP/Classes/RangeInputElement.xib; sourceTree = "<group>"; };
 		12D2BC450C4A6B05397075508D93D9CE /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
-		15D056A222B2076BBEBDCF8F3D190CFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		15D056A222B2076BBEBDCF8F3D190CFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		19F6B030D0E7DA0B32C45F2CA5EF0AF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		1A038CE011D92FBB24CDECC76136CC85 /* Pods-DHAP_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Example-Info.plist"; sourceTree = "<group>"; };
-		1B1833CC1726E32531DCC92A487E0A6A /* Pods_DHAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHAP_Example.framework; path = "Pods-DHAP_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1833CC1726E32531DCC92A487E0A6A /* Pods_DHAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHAP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD141BDADC8619069B414BD49D580B6 /* Pods-DHAP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Example.release.xcconfig"; sourceTree = "<group>"; };
 		21A6DC490B159C3EC755995FFAF49492 /* DHAP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHAP-prefix.pch"; sourceTree = "<group>"; };
-		2773BF816093A3BD86E71B39AF6D1506 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2773BF816093A3BD86E71B39AF6D1506 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C4BAFF20F05759E9C7F1E2839D30CA7 /* DHAP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHAP-dummy.m"; sourceTree = "<group>"; };
 		2C8AF5C452DCD2E05CBB1EBEB98AB038 /* Pods-DHAP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHAP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		30C048F262F6A4130C49AD3954C4CCCD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
@@ -132,7 +133,7 @@
 		62E8CEDD5C8E5299A53885110F57D110 /* ProgressElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ProgressElement.xib; path = DHAP/Classes/ProgressElement.xib; sourceTree = "<group>"; };
 		67B64A5CBCEB54A3E61A5F3F36E3A000 /* DHAP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHAP.swift; path = DHAP/Classes/DHAP.swift; sourceTree = "<group>"; };
 		694096DDFA3B5605BF5DF45B6B30C6C3 /* Pods-DHAP_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHAP_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		6D6933E2C4F2C73F598D88A93B3DDD1B /* SelectionElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectionElement.swift; path = DHAP/Classes/SelectionElement.swift; sourceTree = "<group>"; };
 		71E7643B71CF8D55065B19166664C792 /* ButtonToggleElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonToggleElement.xib; path = DHAP/Classes/ButtonToggleElement.xib; sourceTree = "<group>"; };
@@ -145,11 +146,12 @@
 		8BEF45F5348EB8806BEE652039546B9C /* GroupElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GroupElement.xib; path = DHAP/Classes/GroupElement.xib; sourceTree = "<group>"; };
 		8D60662B128BC84217E085ECC6314093 /* DHAP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHAP.xcconfig; sourceTree = "<group>"; };
 		8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		8F1D912A233F480F004F27F7 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Display.swift; path = DHAP/Classes/Display.swift; sourceTree = "<group>"; };
 		91387C75973F4FD2073633C900A9BA47 /* DHAP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHAP-Info.plist"; sourceTree = "<group>"; };
 		92C672383D0A4030C3D9C2A4364726A6 /* PacketCodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PacketCodes.swift; path = DHAP/Classes/PacketCodes.swift; sourceTree = "<group>"; };
-		9466EDBC18CE260A6D95FEB3C99519A3 /* DHAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DHAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9466EDBC18CE260A6D95FEB3C99519A3 /* DHAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DHAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		A905023E6DEC0CB3ACF18BC768C59C2E /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -166,7 +168,7 @@
 		D236F2F9F8E6879319089BA8AAF09528 /* StepperElement.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = StepperElement.xib; path = DHAP/Classes/StepperElement.xib; sourceTree = "<group>"; };
 		D3E88775EE8CFF73526C93BC2EA82C99 /* ElementView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementView.swift; path = DHAP/Classes/ElementView.swift; sourceTree = "<group>"; };
 		D5F157F703F8134396B2E2D2D64ED7AC /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F6EC5EE2C4372CCC794BC4F5254803 /* Pods_DHAP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHAP_Tests.framework; path = "Pods-DHAP_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F6EC5EE2C4372CCC794BC4F5254803 /* Pods_DHAP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHAP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C1EC8675975D45AAD7936A484D2825 /* Pods-DHAP_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHAP_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DE2BAD441B9D792D58C5209FCD0C5387 /* Discovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discovery.swift; path = DHAP/Classes/Discovery.swift; sourceTree = "<group>"; };
 		DEA17E24F689BAD69B80C9E2639F6EE9 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
@@ -321,7 +323,6 @@
 				A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */,
 				B862B4264C2F1D9F87C12772C46C54AE /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -359,6 +360,7 @@
 				67B64A5CBCEB54A3E61A5F3F36E3A000 /* DHAP.swift */,
 				33A23B9F405A89A2A9CE591E8F9ABA83 /* DirectionalButtonsElement.swift */,
 				C7DA51F9CBDE7532CD92FEDDF27D4A5C /* DirectionalButtonsElement.xib */,
+				8F1D912A233F480F004F27F7 /* Display.swift */,
 				DE2BAD441B9D792D58C5209FCD0C5387 /* Discovery.swift */,
 				D3E88775EE8CFF73526C93BC2EA82C99 /* ElementView.swift */,
 				4D34B3F7ED7E78FECDA6D024D4918D8D /* Group.swift */,
@@ -657,6 +659,7 @@
 				C7C542BD89529929318D8B0C1025B56B /* ProgressElement.xib in Sources */,
 				8665251AAB4D84CD436644CBA0D9D59A /* RangeInputElement.swift in Sources */,
 				528E3F787A20FC14CD5F01139D90FF07 /* RangeInputElement.xib in Sources */,
+				8F1D912B233F480F004F27F7 /* Display.swift in Sources */,
 				4EF661E4C2DCC3B9E396052A5A9D520E /* SchedularElement.swift in Sources */,
 				C0D6EEFFC9613BFE15670B8E310061C5 /* SchedularElement.xib in Sources */,
 				677CA1E43B6D3ACDF5155C46A56892DE /* SelectionElement.swift in Sources */,
@@ -1095,8 +1098,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

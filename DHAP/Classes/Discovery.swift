@@ -191,15 +191,17 @@ class Discovery: UDPHandlerDelegate {
     }
     
     func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes,
-                        data: Data, fromAddress address: Data) {
+                        packetData: Data?, fromAddress: Data) {
         
-        guard let senderAddress = Helpers.parseRemoteAddress(remoteAddress: address) else {
+        guard let senderAddress = Helpers.parseRemoteAddress(remoteAddress: fromAddress) else {
             return
         }
 
         guard let strIPAddress = Helpers.getIPAddress() else {
             return
         }
+        
+        guard let data = packetData else { return }
 
         if strIPAddress == senderAddress {
             print("Received packet from \(senderAddress)")

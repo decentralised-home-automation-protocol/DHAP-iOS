@@ -10,8 +10,10 @@ import UIKit
 
 open class DeviceViewController: UIViewController {
     
-    var contentView: UIView?
-    var scrollView: UIScrollView?
+    private var contentView: UIView?
+    private var scrollView: UIScrollView?
+    
+    public var deviceInterface: String?
     
     open override func loadView() {
         view = UIView()
@@ -54,12 +56,13 @@ open class DeviceViewController: UIViewController {
             heightConstraint
         ])
         
-        navigationController?.title = "Device"
+        navigationController?.title = "Device" // TODO: fix this
         
-        let xmlPath = Bundle.main.url(forResource: "ui", withExtension: ".xml")!
+//        let xmlPath = Bundle.main.url(forResource: "ui", withExtension: ".xml")!
         
         let main = Main()
-        main.getGroupElements(xmlPath: xmlPath) { (groupElements) in
+        let xml = deviceInterface?.data(using: .utf8)
+        main.getGroupElements(xml: xml!) { (groupElements) in
             self.addGroupElementsToView(groupElements: groupElements)
         }
     }

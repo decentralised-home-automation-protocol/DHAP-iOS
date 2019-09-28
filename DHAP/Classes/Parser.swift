@@ -23,17 +23,12 @@ class Parser: NSObject, XMLParserDelegate {
     
     private var completionHandler: (([Group]) -> Void)?
     
-    func parse(xmlPath: URL, completionHandler: (([Group]) -> Void)?) {
+    func parse(xml: Data, completionHandler: (([Group]) -> Void)?) {
         self.completionHandler = completionHandler
-        
-        do {
-            let xmlData = try Data(contentsOf: xmlPath)
-            let parser = XMLParser(data: xmlData)
-            parser.delegate = self
-            parser.parse()
-        } catch {
-            print(error.localizedDescription)
-        }
+
+        let parser = XMLParser(data: xml)
+        parser.delegate = self
+        parser.parse()
     }
     
     // MARK: - XML Parser Delegate

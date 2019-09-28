@@ -15,8 +15,8 @@ public class Main {
         parser = Parser()
     }
     
-    func getGroupElements(xmlPath: URL, completionHandler: @escaping ([GroupElement]) -> Void) {
-        parser.parse(xmlPath: xmlPath) { (groups) in
+    func getGroupElements(xml: Data, completionHandler: @escaping ([GroupElement]) -> Void) {
+        parser.parse(xml: xml) { (groups) in
             var groupElements = [GroupElement]()
             
             for g in groups {
