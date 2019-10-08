@@ -25,7 +25,7 @@ class Discovery: UDPHandlerDelegate {
     
     init(udpHandler: UDPHandler) {
         self.udpHandler = udpHandler
-        self.udpHandler.delegate = self
+        self.udpHandler.delegates.append(self)
     }
     
     func discover(_ completion: @escaping (DevicesResult) -> Void) {

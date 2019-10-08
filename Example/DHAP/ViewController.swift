@@ -24,11 +24,13 @@ class ViewController: UIViewController {
         
         deviceTableView.dataSource = self
         deviceTableView.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         findDevices()
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        findDevices()
+//    }
 
     @IBAction func refreshDeviceList(_ sender: Any) {
         findDevices()
@@ -93,11 +95,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let deviceViewController = DeviceViewController()
         let device = devices[indexPath.row]
         
-//        dhap?.fetchDeviceInterface(device: device) { (interface) in
-//            deviceViewController.deviceInterface = interface
-//
-//            self.navigationController?.pushViewController(deviceViewController, animated: true)
-//        }
+        dhap?.fetchDeviceInterface(device: device) { (interface) in
+            DispatchQueue.main.async {
+                deviceViewController.deviceInterface = interface
+
+                self.navigationController?.pushViewController(deviceViewController, animated: true)
+            }
+        }
     }
     
 }

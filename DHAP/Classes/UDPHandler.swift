@@ -18,7 +18,7 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     
     private var socket: GCDAsyncUdpSocket?
     
-    var delegate: UDPHandlerDelegate?
+    var delegates = [UDPHandlerDelegate]()
     
     override init() {
         super.init()
@@ -67,12 +67,15 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
         if packetString.split(separator: "|").count > 1 {
             dataString = String(packetString.split(separator: "|")[1])
         }
+        print("\(packetString)")
 
         guard let packetCode = PacketCodes(rawValue: code) else { return }
 
         let contents = dataString?.data(using: .utf8)
 
-        delegate?.packetReceived(self, packetCode: packetCode, packetData: contents, fromAddress: address)
+        for delegate in self.delegates {
+            delegate.packetReceived(self, packetCode: packetCode, packetData: contents, fromAddress: address)
+        }
         
     }
     

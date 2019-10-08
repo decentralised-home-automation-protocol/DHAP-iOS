@@ -15,7 +15,7 @@ class Display {
     
     init(udpHandler: UDPHandler) {
         self.udpHandler = udpHandler
-        udpHandler.delegate = self
+        self.udpHandler.delegates.append(self)
     }
     
     func fetchDeviceInterface(device: Device, completion: @escaping (String) -> Void) {
@@ -35,6 +35,8 @@ extension Display: UDPHandlerDelegate {
     func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes,
                         packetData: Data?, fromAddress: Data) {
 
+        print("display: \(packetCode) - \(String(describing: packetData)) - \(fromAddress)")
+        
         guard packetCode == PacketCodes.uiResponse else { return }
 
         guard let dataString = packetData else { return }
