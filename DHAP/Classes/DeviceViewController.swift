@@ -14,6 +14,7 @@ open class DeviceViewController: UIViewController {
     private var scrollView: UIScrollView?
     
     public var deviceInterface: String?
+    public var device: Device?
     
     open override func loadView() {
         view = UIView()
@@ -56,9 +57,7 @@ open class DeviceViewController: UIViewController {
             heightConstraint
         ])
         
-        navigationController?.title = "Device" // TODO: fix this
-        
-//        let xmlPath = Bundle.main.url(forResource: "ui", withExtension: ".xml")!
+        self.title = device?.name
         
         let main = Main()
         let xml = deviceInterface?.data(using: .utf8)
@@ -82,15 +81,8 @@ open class DeviceViewController: UIViewController {
         stackView.spacing = 10
         stackView.isUserInteractionEnabled = true
         
-//        self.view.addSubview(stackView)
         self.contentView?.addSubview(stackView)
         
-//        let guide = self.view.layoutMarginsGuide
-//        NSLayoutConstraint.activate([
-//            stackView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-//            stackView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-//            stackView.topAnchor.constraint(equalTo: guide.topAnchor)
-//        ])
         guard let contentView = self.contentView else { return }
         
         NSLayoutConstraint.activate([

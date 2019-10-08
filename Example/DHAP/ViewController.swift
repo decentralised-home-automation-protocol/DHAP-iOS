@@ -99,6 +99,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         dhap?.fetchDeviceInterface(device: device) { (interface) in
             DispatchQueue.main.async {
                 deviceViewController.deviceInterface = interface
+                deviceViewController.device = device
 
                 self.navigationController?.pushViewController(deviceViewController, animated: true)
             }
