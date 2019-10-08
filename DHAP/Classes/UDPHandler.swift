@@ -63,7 +63,10 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
         let packet = packetString.split(separator: "|")
         guard let codeString = packet.first, let code = Int(codeString) else { return }
 
-        let dataString: String? = String(packetString.split(separator: "|")[1])
+        var dataString: String?
+        if packetString.split(separator: "|").count > 1 {
+            dataString = String(packetString.split(separator: "|")[1])
+        }
 
         guard let packetCode = PacketCodes(rawValue: code) else { return }
 

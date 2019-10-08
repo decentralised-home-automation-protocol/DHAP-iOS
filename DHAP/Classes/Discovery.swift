@@ -25,7 +25,7 @@ class Discovery: UDPHandlerDelegate {
     
     init(udpHandler: UDPHandler) {
         self.udpHandler = udpHandler
-        udpHandler.delegate = self
+        self.udpHandler.delegate = self
     }
     
     func discover(_ completion: @escaping (DevicesResult) -> Void) {
@@ -110,7 +110,7 @@ class Discovery: UDPHandlerDelegate {
             censusListString += "|"
             var deviceStrings = [String]()
             for device in censusList {
-                deviceStrings.append("\(device.macAddress),0,0")
+                deviceStrings.append("\(device.macAddress),1,1")
             }
             censusListString += deviceStrings.joined(separator: "-")
         }
@@ -165,11 +165,9 @@ class Discovery: UDPHandlerDelegate {
         
         print("Packet data: \(packetString)")
         
-        let contents = packetString.split(separator: "|")
+        let contents = packetString.split(separator: ",")
         
-        guard let macAddress = contents[1].split(separator: ",").first else {
-            return
-        }
+        let macAddress = contents[0]
         
         // make device instance
         let device = Device(macAddress: String(macAddress), ipAddress: remoteAddress)
@@ -182,8 +180,8 @@ class Discovery: UDPHandlerDelegate {
         
         for i in 0..<censusList.count {
             if censusList[i].ipAddress == fromAddress {
-                censusList[i].name = String(headerData[1])
-                censusList[i].location = String(headerData[2])
+                censusList[i].name = String(headerData[2])
+                censusList[i].location = String(headerData[3])
                 previousCensusList.append(censusList[i])
                 return
             }
@@ -192,6 +190,8 @@ class Discovery: UDPHandlerDelegate {
     
     func packetReceived(_ handler: UDPHandler, packetCode: PacketCodes,
                         packetData: Data?, fromAddress: Data) {
+        
+        print("\(packetCode) - \(String(describing: packetData)) - \(fromAddress)")
         
         guard let senderAddress = Helpers.parseRemoteAddress(remoteAddress: fromAddress) else {
             return

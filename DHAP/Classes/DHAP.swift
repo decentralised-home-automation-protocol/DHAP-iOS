@@ -11,12 +11,12 @@ public class DHAP {
 
     private let udpHandler: UDPHandler
     private let discovery: Discovery
-    private let display: Display
+//    private let display: Display
 
     public init() {
         udpHandler = UDPHandler()
         discovery = Discovery(udpHandler: udpHandler)
-        display = Display(udpHandler: udpHandler)
+//        display = Display(udpHandler: udpHandler)
     }
 
     public func discoverDevices(completion: @escaping (DevicesResult) -> Void) {
@@ -25,10 +25,10 @@ public class DHAP {
         }
     }
 
-    public func fetchDeviceInterface(device: Device, completion: @escaping (String) -> Void) {
-        display.fetchDeviceInterface(device: device) { (interface) in
-            completion(interface)
-        }
-    }
+//    public func fetchDeviceInterface(device: Device, completion: @escaping (String) -> Void) {
+//        display.fetchDeviceInterface(device: device) { (interface) in
+//            completion(interface)
+//        }
+//    }
     
 }

@@ -93,11 +93,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let deviceViewController = DeviceViewController()
         let device = devices[indexPath.row]
         
-        dhap?.fetchDeviceInterface(device: device) { (interface) in
-            deviceViewController.deviceInterface = interface
-
-            self.navigationController?.pushViewController(deviceViewController, animated: true)
-        }
+//        dhap?.fetchDeviceInterface(device: device) { (interface) in
+//            deviceViewController.deviceInterface = interface
+//
+//            self.navigationController?.pushViewController(deviceViewController, animated: true)
+//        }
     }
     
 }
