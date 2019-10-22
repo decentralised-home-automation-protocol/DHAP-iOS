@@ -14,8 +14,8 @@ public class DHAP {
     private let display: Display
 
     public init() {
-        udpHandler = UDPHandler()
-        discovery = Discovery(udpHandler: udpHandler)
+        udpHandler = UDPHandler.shared()
+        discovery = Discovery()
         display = Display(udpHandler: udpHandler)
     }
 

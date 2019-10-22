@@ -23,9 +23,10 @@ class Discovery: UDPHandlerDelegate {
     
     private var repliedDevices = [Device]()
     
-    init(udpHandler: UDPHandler) {
-        self.udpHandler = udpHandler
+    init() {
+        self.udpHandler = UDPHandler.shared()
         self.udpHandler.delegates.append(self)
+        print(udpHandler.delegates.count)
     }
     
     func discover(_ completion: @escaping (DevicesResult) -> Void) {

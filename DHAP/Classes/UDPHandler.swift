@@ -20,7 +20,15 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
     
     var delegates = [UDPHandlerDelegate]()
     
-    override init() {
+    private static var handler: UDPHandler = {
+        return UDPHandler()
+    }()
+    
+    class func shared() -> UDPHandler {
+        return handler
+    }
+    
+    private override init() {
         super.init()
         
         socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .global(qos: .utility))
@@ -73,6 +81,8 @@ class UDPHandler: NSObject, GCDAsyncUdpSocketDelegate {
 
         let contents = dataString?.data(using: .utf8)
 
+        print(self.delegates.count)
+        
         for delegate in self.delegates {
             delegate.packetReceived(self, packetCode: packetCode, packetData: contents, fromAddress: address)
         }

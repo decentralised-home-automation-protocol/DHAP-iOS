@@ -20,5 +20,11 @@ enum PacketCodes: Int {
     case discoveryResponse = 310
     case discoveryHeaderRequest = 320
     case discoveryHeaderRespone = 330
+    
+    // MARK: - Status
+    
+    case statusLeaseRequest = 500
+    case statusLeaseResponse = 510
+    case statusUpdate = 530
 
 }

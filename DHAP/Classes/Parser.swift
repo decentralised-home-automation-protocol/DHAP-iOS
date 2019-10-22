@@ -17,6 +17,7 @@ class Parser: NSObject, XMLParserDelegate {
     private var currentElement = String()
     private var currentElementType = String()
     private var currentElementDisplaySettings = [String]()
+    private var currentElementStatusLocation = Int()
     
     private var groups = [Group]()
     private var guiElements = [GUIElement]()
@@ -59,6 +60,8 @@ class Parser: NSObject, XMLParserDelegate {
             for setting in displaySettings {
                 currentElementDisplaySettings.append(String(setting))
             }
+        case "status_location":
+            currentElementStatusLocation = Int(string.trimmingCharacters(in: .whitespacesAndNewlines))!
         default: break
         }
     }
@@ -68,7 +71,7 @@ class Parser: NSObject, XMLParserDelegate {
         switch elementName {
         case "gui_element":
             if let type = GUIElementType(rawValue: currentElementType) {
-                let guiElement = GUIElement(type: type, displaySettings: currentElementDisplaySettings)
+                let guiElement = GUIElement(type: type, displaySettings: currentElementDisplaySettings, statusLocation: currentElementStatusLocation)
                 self.guiElements.append(guiElement)
             }
         case "group":

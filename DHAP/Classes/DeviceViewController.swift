@@ -12,6 +12,7 @@ open class DeviceViewController: UIViewController {
     
     private var contentView: UIView?
     private var scrollView: UIScrollView?
+    private var udpHandler: UDPHandler?
     
     public var deviceInterface: String?
     public var device: Device?
@@ -23,6 +24,8 @@ open class DeviceViewController: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        
+        udpHandler = UDPHandler.shared()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissActiveSelection))
         self.view.addGestureRecognizer(tapGesture)
@@ -59,7 +62,7 @@ open class DeviceViewController: UIViewController {
         
         self.title = device?.name
         
-        let main = Main()
+        let main = Main(udpHandler: udpHandler!, device: device!)
         let xml = deviceInterface?.data(using: .utf8)
         main.getGroupElements(xml: xml!) { (groupElements) in
             self.addGroupElementsToView(groupElements: groupElements)

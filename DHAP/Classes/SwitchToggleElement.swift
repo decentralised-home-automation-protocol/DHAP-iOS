@@ -11,8 +11,10 @@ class SwitchToggleElement: ElementView {
     
     @IBOutlet var label: UILabel!
     
+    @IBOutlet var switchToggle: UISwitch!
+    
     @IBAction func switchToggled(_ sender: UISwitch) {
-        print("switch toggled")
+        
     }
     
 }

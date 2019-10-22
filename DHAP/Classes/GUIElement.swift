@@ -19,4 +19,6 @@ public struct GUIElement {
     
     public var displaySettings: [String]
     
+    public var statusLocation: Int
+    
 }

@@ -11,6 +11,8 @@ class StepperElement: ElementView {
 
     @IBOutlet var label: UILabel!
 
+    @IBOutlet var valueLabel: UILabel!
+    
     private let value = Int()
 
     @IBAction func onChange(_ sender: UIStepper) {
