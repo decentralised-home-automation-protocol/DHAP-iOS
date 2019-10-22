@@ -15,7 +15,7 @@ public class DHAP {
 
     public init() {
         udpHandler = UDPHandler.shared()
-        discovery = Discovery()
+        discovery = Discovery(udpHandler: udpHandler)
         display = Display(udpHandler: udpHandler)
     }
 

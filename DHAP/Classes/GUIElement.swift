@@ -15,6 +15,8 @@ public enum GUIElementType: String {
 
 public struct GUIElement {
     
+    public var id: Int
+    
     public var type: GUIElementType
     
     public var displaySettings: [String]

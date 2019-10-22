@@ -7,9 +7,19 @@
 
 import Foundation
 
+protocol CommandDelegate {
+    func didSendCommand(_ sender: ElementView, command: String)
+}
+
 class ElementView: UIView {
     
+    var groupId: Int!
+    
+    var elementId: Int!
+    
     var contentView: UIView?
+    
+    var delegate: CommandDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -13,7 +13,10 @@ enum Schema: String {
 
 class Parser: NSObject, XMLParserDelegate {
     
+    private var currentGroupId = Int()
     private var currentGroupLabel = String()
+    
+    private var currentElementId = Int()
     private var currentElement = String()
     private var currentElementType = String()
     private var currentElementDisplaySettings = [String]()
@@ -39,10 +42,22 @@ class Parser: NSObject, XMLParserDelegate {
         if currentElement == "gui_element" {
             currentElementType = ""
             currentElementDisplaySettings.removeAll()
+            
+            if let elementId = attributeDict["id"] {
+                if let id = Int(elementId) {
+                    currentElementId = id
+                }
+            }
         }
         
         if elementName == "group" {
             currentGroupLabel = ""
+
+            if let groupId = attributeDict["id"] {
+                if let id = Int(groupId) {
+                    currentGroupId = id
+                }
+            }
         }
         
         currentElement = elementName
@@ -71,11 +86,11 @@ class Parser: NSObject, XMLParserDelegate {
         switch elementName {
         case "gui_element":
             if let type = GUIElementType(rawValue: currentElementType) {
-                let guiElement = GUIElement(type: type, displaySettings: currentElementDisplaySettings, statusLocation: currentElementStatusLocation)
+                let guiElement = GUIElement(id: currentElementId, type: type, displaySettings: currentElementDisplaySettings, statusLocation: currentElementStatusLocation)
                 self.guiElements.append(guiElement)
             }
         case "group":
-            let group = Group(label: currentGroupLabel, elements: guiElements)
+            let group = Group(id: currentGroupId, label: currentGroupLabel, elements: guiElements)
             self.groups.append(group)
             guiElements = []
         default: break

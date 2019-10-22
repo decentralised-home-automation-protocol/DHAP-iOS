@@ -37,7 +37,9 @@ class ViewController: UIViewController {
     }
     
     private func findDevices() {
+        showFetchingIndicatorAlert()
         dhap?.discoverDevices { (result) in
+            self.dismissFetchingIndicatorAlert()
             switch result {
             case .foundDevices(let devices):
                 print("Devices: \(devices)")
@@ -50,6 +52,24 @@ class ViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    private func showFetchingIndicatorAlert() {
+        let alert = UIAlertController(title: nil, message: "Discovering...", preferredStyle: .alert)
+        
+        let fetchingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        fetchingIndicator.hidesWhenStopped = true
+        fetchingIndicator.style = UIActivityIndicatorView.Style.gray
+        fetchingIndicator.startAnimating()
+        
+        alert.view.addSubview(fetchingIndicator)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func dismissFetchingIndicatorAlert() {
+        DispatchQueue.main.async {
+            self.dismiss(animated: false, completion: nil)
         }
     }
     

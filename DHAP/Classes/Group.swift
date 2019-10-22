@@ -9,6 +9,8 @@ import Foundation
 
 public struct Group {
     
+    public var id: Int
+    
     public var label: String
     
     public var elements: [GUIElement]

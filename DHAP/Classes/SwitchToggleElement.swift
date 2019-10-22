@@ -14,7 +14,7 @@ class SwitchToggleElement: ElementView {
     @IBOutlet var switchToggle: UISwitch!
     
     @IBAction func switchToggled(_ sender: UISwitch) {
-        
+        delegate?.didSendCommand(self, command: sender.isOn.description)
     }
     
 }

@@ -29,12 +29,12 @@ public class Main {
             
             for g in groups {
                 
-                print("Group Start")
+                print("Group Start - \(g.id)")
                 let groupView = GroupElement()
                 groupView.label.text = g.label
                 
                 for e in g.elements {
-                    print("type: \(e.type.rawValue), label: \(e.displaySettings)")
+                    print("id: \(e.id), type: \(e.type.rawValue), label: \(e.displaySettings)")
                     
                     switch e.type {
                     case .buttontoggle:
@@ -43,29 +43,54 @@ public class Main {
                         buttonToggleElement.button.setTitle("OFF", for: .normal)
                         buttonToggleElement.label.text = e.displaySettings.first
                         
+                        buttonToggleElement.delegate = self
+                        
+                        buttonToggleElement.groupId = g.id
+                        buttonToggleElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(buttonToggleElement)
+                        
                         self.elements[e.statusLocation] = buttonToggleElement
                         self.displaySettings[e.statusLocation] = e.displaySettings
+                        
                     case .switchtoggle:
                         let switchToggleElement = SwitchToggleElement(frame: .zero)
                         
                         switchToggleElement.label.text = e.displaySettings.first
                         
+                        switchToggleElement.delegate = self
+                        
+                        switchToggleElement.groupId = g.id
+                        switchToggleElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(switchToggleElement)
+                        
                         self.elements[e.statusLocation] = switchToggleElement
                     case .stepper:
                         let stepperElement = StepperElement(frame: .zero)
                         
                         stepperElement.label.text = e.displaySettings.first
                         
+                        stepperElement.delegate = self
+                        
+                        stepperElement.groupId = g.id
+                        stepperElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(stepperElement)
+                        
                         self.elements[e.statusLocation] = stepperElement
                     case .rangeinput:
                         let rangeInputElement = RangeInputElement(frame: .zero)
                         
                         rangeInputElement.label.text = e.displaySettings.first
                         
+                        rangeInputElement.delegate = self
+                        
+                        rangeInputElement.groupId = g.id
+                        rangeInputElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(rangeInputElement)
+                        
                         self.elements[e.statusLocation] = rangeInputElement
                     case .directionalbuttons:
                         let directionalButtonsElement = DirectionalButtonsElement(frame: .zero)
@@ -77,7 +102,13 @@ public class Main {
                         directionalButtonsElement.bottomButton.setTitle(e.displaySettings[3], for: .normal)
                         directionalButtonsElement.leftButton.setTitle(e.displaySettings[4], for: .normal)
                         
+                        directionalButtonsElement.delegate = self
+                        
+                        directionalButtonsElement.groupId = g.id
+                        directionalButtonsElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(directionalButtonsElement)
+                        
                         self.elements[e.statusLocation] = directionalButtonsElement
                     case .selection:
                         let selectionElement = SelectionElement(frame: .zero)
@@ -87,14 +118,26 @@ public class Main {
                         let data = e.displaySettings
                         selectionElement.data = Array(data.dropFirst())
                         
+                        selectionElement.delegate = self
+                        
+                        selectionElement.groupId = g.id
+                        selectionElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(selectionElement)
+                        
                         self.elements[e.statusLocation] = selectionElement
                     case .status:
                         let statusElement = StatusElement(frame: .zero)
                         
                         statusElement.label.text = e.displaySettings.first
                         
+                        statusElement.delegate = self
+                        
+                        statusElement.groupId = g.id
+                        statusElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(statusElement)
+                        
                         self.elements[e.statusLocation] = statusElement
                     case .textinput:
                         let textInputElement = TextInputElement(frame: .zero)
@@ -102,14 +145,26 @@ public class Main {
                         textInputElement.label.text = e.displaySettings.first
                         textInputElement.button.setTitle(e.displaySettings[1], for: .normal)
                         
+                        textInputElement.delegate = self
+                        
+                        textInputElement.groupId = g.id
+                        textInputElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(textInputElement)
+                        
                         self.elements[e.statusLocation] = textInputElement
                     case .progress:
                         let progressElement = ProgressElement(frame: .zero)
                         
                         progressElement.label.text = e.displaySettings.first
                         
+                        progressElement.delegate = self
+                        
+                        progressElement.groupId = g.id
+                        progressElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(progressElement)
+                        
                         self.elements[e.statusLocation] = progressElement
                     case .buttongroup:
                         let buttonGroupElement = ButtonGroupElement(frame: .zero)
@@ -125,7 +180,13 @@ public class Main {
                             buttonGroupElement.stackView.addArrangedSubview(button)
                         }
                         
+                        buttonGroupElement.delegate = self
+                        
+                        buttonGroupElement.groupId = g.id
+                        buttonGroupElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(buttonGroupElement)
+                        
                         self.elements[e.statusLocation] = buttonGroupElement
                     case .scheduler:
                         let schedularElement = SchedularElement(frame: .zero)
@@ -133,7 +194,13 @@ public class Main {
                         schedularElement.label.text = e.displaySettings.first
                         schedularElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
                         
+                        schedularElement.delegate = self
+                        
+                        schedularElement.groupId = g.id
+                        schedularElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(schedularElement)
+                        
                         self.elements[e.statusLocation] = schedularElement
                     case .password:
                         let passwordElement = PasswordElement(frame: .zero)
@@ -141,7 +208,13 @@ public class Main {
                         passwordElement.label.text = e.displaySettings.first
                         passwordElement.submitButton.setTitle(e.displaySettings[1], for: .normal)
                         
+                        passwordElement.delegate = self
+                        
+                        passwordElement.groupId = g.id
+                        passwordElement.elementId = e.id
+                        
                         groupView.stackView.addArrangedSubview(passwordElement)
+                        
                         self.elements[e.statusLocation] = passwordElement
                     }
                     
@@ -206,11 +279,31 @@ extension Main: UDPHandlerDelegate {
                     DispatchQueue.main.async {
                         e.selectionField.text = e.data[Int(String(state))!]
                     }
+                case is TextInputElement:
+                    let e = element as! TextInputElement
+                case is StatusElement:
+                    let e = element as! StatusElement
+                    DispatchQueue.main.async {
+                        e.status.text = String(state)
+                    }
                 default:
                     break
                 }
             }
         }
+    }
+    
+}
+
+extension Main: CommandDelegate {
+    
+    func didSendCommand(_ sender: ElementView, command: String) {
+        print("--- Command: \(command) ---")
+        let dataString = "\(PacketCodes.commandRequest.rawValue)|\(sender.groupId!)-\(sender.elementId!)=\(command)"
+        let data = dataString.data(using: .utf8)!
+        let packet = UDPPacket(data: data, host: device.ipAddress, port: 8888)
+        udpHandler.sendPacket(packet: packet)
+        print("PAKCET: \(packet.data) - \(packet.host!) - \(packet.port)")
     }
     
 }
